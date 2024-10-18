@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import BreadcrumbItem from "../components/BreadcrumbItem.astro";
+import Download from "../components/Download.astro";
+---
+
+<Layout title="Downloads">
+  <Breadcrumb>
+    <BreadcrumbItem label="Downloads" />
+  </Breadcrumb>
+
+  <div class="container my-auto">
+    <h2>Botfather Downloads</h2>
+    <hr />
+    <div class="row mb-3">
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <Download
+          src="/images/icons8-linux-100.png"
+          alt="Linux Logo"
+          title="Linux (Flatpak)"
+          cpu="4 cores with 2.4 GHz is the lowest tested"
+          gpu="Any with CUDA support recommended"
+          ram="At least 4GB"
+          os="Any 64 bit system"
+          href="https://flathub.org/apps/details/io.botfather.Botfather"
+        />
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <Download
+          src="/images/icons8-windows8-100.png"
+          alt="Windows Logo"
+          title="Windows"
+          cpu="4 cores with 2.4 GHz is the lowest tested"
+          gpu="Any with CUDA support"
+          ram="At least 4GB"
+          os="Windows 10 (64-bit) or newer"
+          href="https://repo.botfather.io/installers/Botfather.exe"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>

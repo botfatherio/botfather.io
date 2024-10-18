@@ -1,0 +1,36 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  title: string;
+  cpu: string;
+  gpu: string;
+  ram: string;
+  os: string;
+  href: string;
+}
+
+const { src, alt, title, cpu, gpu, ram, os, href } = Astro.props;
+---
+
+<div class="card h-100">
+  <div class="card-body d-flex flex-column">
+    <div
+      class="py-5 justify-content-center align-items-center d-flex"
+      style="height: 200px"
+    >
+      <img class="mw-100 mh-100" src={src} alt={alt} />
+    </div>
+
+    <h3 class="card-title">{title}</h3>
+    <div class="card-text flex-fill">
+      <ul class="list-unstyled">
+        <li><strong>CPU:</strong> {cpu}</li>
+        <li><strong>GPU:</strong> {gpu}</li>
+        <li><strong>RAM:</strong> {ram}</li>
+        <li><strong>OS:</strong> {os}</li>
+      </ul>
+    </div>
+    <a href={href} class="btn btn-primary btn-lg btn-block text-white">Download</a>
+  </div>
+</div>
