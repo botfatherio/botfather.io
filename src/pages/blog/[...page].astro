@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import PostPreviews from "../../components/PostPreviews.astro";
+import PostPreview from "../../components/PostPreview.astro";
+import PostPagination from "../../components/PostPagination.astro";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getCollection("posts");
+  const sortedPosts = posts.sort(
+    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+  );
+
+  return paginate(
+    sortedPosts.map((post) => ({
+      slug: post.slug,
+      title: post.data.title,
+      pubDate: post.data.pubDate,
+      lead: post.data.lead,
+    })),
+    { pageSize: 4 }
+  );
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<Layout title="Botfather Blog">
+  <Header
+    title="Botfather Blog"
+    description="All the latest news from the Botfather team and community."
+  />
+
+  <PostPreviews>
+    {
+      page.data.map(({ slug, title, pubDate, lead }) => (
+        <PostPreview slug={slug} title={title} pubDate={pubDate} lead={lead} />
+      ))
+    }
+  </PostPreviews>
+
+  <PostPagination page={page} />
+</Layout>

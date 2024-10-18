@@ -1,0 +1,47 @@
+---
+import type { Page } from "astro";
+
+interface Props {
+  page: Page;
+}
+
+const { page } = Astro.props;
+---
+
+<div class="container">
+  <nav aria-label="Blog posts pagination">
+    <ul class="pagination">
+      <li class={`page-item ${page.url.first ? "" : "disabled"}`}>
+        <a class="page-link" href={page.url.first} aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+
+      {
+        Array.from({ length: page.lastPage }, (_, i) => i + 1).map(
+          (pageNumber) => {
+            const isActive = pageNumber === page.currentPage;
+            const href = pageNumber === 1 ? "/blog/" : `/blog/${pageNumber}/`;
+
+            return (
+              <li
+                class={`page-item ${isActive ? "active" : ""}`}
+                aria-current={isActive ? "page" : undefined}
+              >
+                <a class="page-link" href={href}>
+                  {pageNumber}
+                </a>
+              </li>
+            );
+          }
+        )
+      }
+
+      <li class={`page-item ${page.url.last ? "" : "disabled"}`}>
+        <a class="page-link" href={page.url.last} aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
