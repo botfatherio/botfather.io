@@ -10,7 +10,7 @@ const { href, label } = Astro.props;
 {
   href ? (
     <li class="breadcrumb-item">
-      <a class="text-decoration-none" href={href}>{label}</a>
+      <a href={href}>{label}</a>
     </li>
   ) : (
     <li class="breadcrumb-item active" aria-current="page">
