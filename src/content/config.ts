@@ -16,7 +16,23 @@ const postsCollection = defineCollection({
   }),
 });
 
+const apirefCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+  }),
+});
+
+const guidesCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+  }),
+});
+
 export const collections = {
   legal: legalCollection,
   posts: postsCollection,
+  apiref: apirefCollection,
+  guides: guidesCollection,
 };

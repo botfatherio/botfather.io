@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumb from "../../../components/Breadcrumb.astro";
+import BreadcrumbItem from "../../../components/BreadcrumbItem.astro";
+
+export const getStaticPaths = (async () => {
+  const docs = await getCollection("apiref");
+
+  return docs.map((doc) => ({
+    params: { slug: doc.slug },
+    props: { doc },
+  }));
+}) satisfies GetStaticPaths;
+
+const { doc } = Astro.props;
+const { Content } = await doc.render();
+---
+
+<Layout title={doc.data.title}>
+  <Breadcrumb>
+    <BreadcrumbItem href="/docs/" label="Documentation" />
+    <BreadcrumbItem href="/docs/apiref/" label="API References" />
+    <BreadcrumbItem label={doc.data.title} />
+  </Breadcrumb>
+
+  <article class="container py-5">
+    <h1>{doc.data.title}</h1>
+    <Content />
+  </article>
+</Layout>

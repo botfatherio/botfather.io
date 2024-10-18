@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumb from "../../../components/Breadcrumb.astro";
+import BreadcrumbItem from "../../../components/BreadcrumbItem.astro";
+
+export const getStaticPaths = (async () => {
+  const guides = await getCollection("guides");
+
+  return guides.map((guide) => ({
+    params: { slug: guide.slug },
+    props: { guide },
+  }));
+}) satisfies GetStaticPaths;
+
+const { guide } = Astro.props;
+const { Content } = await guide.render();
+---
+
+<Layout title={guide.data.title}>
+  <Breadcrumb>
+    <BreadcrumbItem href="/docs/" label="Documentation" />
+    <BreadcrumbItem href="/docs/guides/" label="Guides" />
+    <BreadcrumbItem label={guide.data.title} />
+  </Breadcrumb>
+
+  <article class="container py-5">
+    <h1>{guide.data.title}</h1>
+    <Content />
+  </article>
+</Layout>

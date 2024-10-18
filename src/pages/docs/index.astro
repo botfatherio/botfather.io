@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import DocsSection from "../../components/DocsSection.astro";
+import DocsItem from "../../components/DocsItem.astro";
+
+const guides = await getCollection("guides");
+const apiref = await getCollection("apiref");
+---
+
+<Layout title="Documentation">
+  <Header
+    title="Documentation"
+    description="Guides, tutorials, references and other botfather resources."
+  />
+
+  <div class="container d-flex flex-column my-5 gap-3">
+    <DocsSection href="/docs/guides/" title="Guides">
+      {
+        guides.map((guide) => (
+          <DocsItem
+            href={`/docs/guides/${guide.slug}/`}
+            title={guide.data.title}
+          />
+        ))
+      }
+    </DocsSection>
+
+    <DocsSection href="/docs/apiref/" title="API Reference">
+      {
+        apiref.map((reference) => (
+          <DocsItem
+            href={`/docs/apiref/${reference.slug}/`}
+            title={reference.data.title}
+          />
+        ))
+      }
+    </DocsSection>
+  </div>
+</Layout>

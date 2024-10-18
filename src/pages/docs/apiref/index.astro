@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import Breadcrumb from "../../../components/Breadcrumb.astro";
+import BreadcrumbItem from "../../../components/BreadcrumbItem.astro";
+import DocsSection from "../../../components/DocsSection.astro";
+import DocsItem from "../../../components/DocsItem.astro";
+
+const apiref = await getCollection("apiref");
+---
+
+<Layout title="API Reference">
+  <Breadcrumb>
+    <BreadcrumbItem href="/docs/" label="Documentation" />
+    <BreadcrumbItem label="API Reference" />
+  </Breadcrumb>
+
+  <div class="container my-5">
+    <DocsSection href="/docs/apiref/" title="API Reference">
+      {
+        apiref.map((reference) => (
+          <DocsItem
+            href={`/docs/apiref/${reference.slug}/`}
+            title={reference.data.title}
+          />
+        ))
+      }
+    </DocsSection>
+  </div>
+</Layout>
