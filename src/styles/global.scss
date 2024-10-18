@@ -1,1 +1,92 @@
+$botfather_black: hsl(0, 0%, 4%);
+$botfather_black-bis: hsl(0, 0%, 7%);
+$botfather_black-ter: hsl(0, 0%, 14%);
+$botfather_grey-darker: hsl(0, 0%, 21%);
+$botfather_grey-dark: hsl(0, 0%, 29%);
+$botfather_grey: hsl(0, 0%, 48%);
+$botfather_grey-light: hsl(0, 0%, 71%);
+$botfather_grey-lighter: hsl(0, 0%, 86%);
+$botfather_white-ter: hsl(0, 0%, 96%);
+$botfather_white-bis: hsl(0, 0%, 98%);
+$botfather_white: hsl(0, 0%, 100%);
+$botfather_orange: hsl(14, 100%, 53%);
+$botfather_yellow: hsl(48, 100%, 67%);
+$botfather_green: hsl(141, 71%, 48%);
+$botfather_turquoise: hsl(171, 100%, 41%);
+$botfather_cyan: hsl(204, 86%, 53%);
+$botfather_blue: hsl(217, 71%, 53%);
+$botfather_purple: hsl(271, 100%, 71%);
+$botfather_red: hsl(348, 100%, 61%);
+
+$theme-colors: (
+  "primary": $botfather_turquoise,
+  "secondary": $botfather_grey,
+  "success": $botfather_green,
+  "info": $botfather_cyan,
+  "warning": $botfather_yellow,
+  "danger": $botfather_red,
+  "light": $botfather_white-bis,
+  "dark": $botfather_grey-darker,
+  "patreon": #e85b46,
+  "blurple": #7289da,
+  "white": #fff,
+);
+
+$link-color: $botfather_blue;
+$body-color: $botfather_grey-dark;
+$border-color: $botfather_grey-lighter;
+$component-active-bg: $link-color;
+
+$font-family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif;
+
+$container-padding-x: 2rem;
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1200px,
+);
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+);
+
 @import "bootstrap/scss/bootstrap";
+
+.btn-primary {
+  @include button-variant(
+    $background: $botfather_turquoise,
+    $border: $botfather_turquoise,
+    $color: $botfather_white,
+    $hover-color: $botfather_white,
+    $active-color: $botfather_white
+  );
+}
+
+.btn-outline-primary {
+  @include button-outline-variant($botfather_turquoise, $botfather_white);
+}
+
+.btn-info {
+  @include button-variant(
+    $background: $botfather_cyan,
+    $border: $botfather_cyan,
+    $color: $botfather_white,
+    $hover-color: $botfather_white,
+    $active-color: $botfather_white
+  );
+}
+
+.btn-outline-info {
+  @include button-outline-variant($botfather_cyan, $botfather_white);
+}
