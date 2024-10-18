@@ -1,39 +1,98 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Jumbotron from "../components/Jumbotron.astro";
+import CodeCard from "../components/CodeCard.astro";
+import Entrypoints from "../components/Entrypoints.astro";
+import Entrypoint from "../components/Entrypoint.astro";
+import Feature from "../components/Feature.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="container min-vh-100 d-flex flex-column justify-content-center">
-    <div class="row gy-4">
-      <div class="col-6">
-        <Card
-          href="https://docs.astro.build/"
-          title="Documentation"
-          body="Learn how Astro works and explore the official API docs."
-        />
-      </div>
-      <div class="col-6">
-        <Card
-          href="https://astro.build/integrations/"
-          title="Integrations"
-          body="Supercharge your project with new frameworks and libraries."
-        />
-      </div>
-      <div class="col-6">
-        <Card
-          href="https://astro.build/themes/"
-          title="Themes"
-          body="Explore a galaxy of community-built starter themes."
-        />
-      </div>
-      <div class="col-6">
-        <Card
-          href="https://astro.build/chat/"
-          title="Community"
-          body="Come say hi to our amazing Discord community. ❤️"
-        />
-      </div>
-    </div>
-  </main>
+  <Jumbotron
+    title="Create bots with ease"
+    subtitle="Android, Browser, Desktop controlling bots made easy"
+    description="With Botfather, you can create cross-platform bots controlling Android devices and emulators, websites and browser games, or any desktop application using simple JavaScript and botfathers API."
+  >
+    <a class="btn btn-lg btn-info" href="/downloads/" slot="buttons">
+      <b>Downloads</b>&nbsp;
+      <i class="bi bi-file-earmark-arrow-down-fill"></i>
+    </a>
+    <a class="btn btn-lg btn-light" href="/scripts/" slot="buttons">
+      Get <b>Scripts</b>
+      <i class="bi bi-code-slash"></i>
+    </a>
+
+    <CodeCard
+      filename="~/scripts/agar.io.js"
+      code={`var browser = new Browser('Demo');
+browser.loadUrl('http://agar.io/');
+browser.finishLoading(); // Wait for the site to load
+
+var js = 'document.getElementById("play").click();';
+browser.executeJavascript(js); // Click the play button
+
+while (true) {
+  // Generate random position on screen
+  var random_point = browser.rect.randomPoint();
+
+  browser.moveMouseTo(random_point); // Guess what
+  Helper.sleep(3); // Do nothing for 3 seconds
+}`}
+    />
+  </Jumbotron>
+
+  <Entrypoints>
+    <Entrypoint
+      src="/images/icons8-downloads-100.png"
+      alt="Botfather Downloads"
+      title="Download"
+      description="Get started by downloading the latest Botfather installer for Windows or Linux. No registration required."
+      href="/downloads/"
+      label="Downloads"
+    />
+    <Entrypoint
+      src="/images/icons8-code-file-100.png"
+      alt="Get botfather scripts"
+      title="Get scripts"
+      description="Scripts tell Botfather what to do. Feel free to download and run scripts from our website. Or create you own scripts."
+      href="/scripts/"
+      label="Get scripts"
+    />
+    <Entrypoint
+      src="/images/icons8-automation-100.png"
+      alt="Automate"
+      title="Automate"
+      description="Automate your daily tasks, browser games or any desktop application with Botfather. No coding skills required."
+      href="/docs/"
+      label="Learn more"
+    />
+  </Entrypoints>
+
+  <hr />
+
+  <Feature
+    src="/images/icons8-android-100.png"
+    alt="Botfather Android Bot"
+    title="Android Bots"
+    description="Android phones and emulators can be controlled by Botfather. Undetectable by apps, you can take screenshots, send taps, and type text to control them. There is no need to grind mobile games anymore."
+  />
+
+  <hr />
+
+  <Feature
+    src="/images/icons8-web-design-100.png"
+    alt="Botfather Browser Bot"
+    title="Browser Bots"
+    description="Control any website or browser game you want. Botfather has an integrated browser that can be controlled like no other browser. Send requests, manipulate presentations, and analyze screenshots in no time."
+    variant
+  />
+
+  <hr />
+
+  <Feature
+    src="/images/icons8-monitor-100.png"
+    alt="Botfather Desktop Bot"
+    title="Desktop Bots"
+    description="Any desktop application and game can be controlled using Botfather. Automate boring tasks by analyzing screenshots and sending keyboard and mouse input in response."
+  />
 </Layout>

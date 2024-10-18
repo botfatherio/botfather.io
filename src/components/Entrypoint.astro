@@ -1,0 +1,27 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  title: string;
+  description: string;
+  href: string;
+  label: string;
+}
+
+const { src, alt, title, description, href, label } = Astro.props;
+---
+
+<div class="col-md-4">
+  <div class="card h-100">
+    <div class="card-img-top py-5 d-flex justify-content-center">
+      <img src={src} alt={alt} />
+    </div>
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">{title}</h5>
+      <div class="card-text h-100">
+        <p>{description}</p>
+      </div>
+      <a class="btn btn-outline-info" href={href} role="button">{label}</a>
+    </div>
+  </div>
+</div>

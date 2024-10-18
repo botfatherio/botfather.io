@@ -1,0 +1,25 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  title: string;
+  description: string;
+  variant?: boolean;
+}
+
+const { src, alt, title, description, variant } = Astro.props;
+---
+
+<div class="container py-6">
+  <div class="row align-items-center">
+    <div
+      class={`col-12 col-lg-4 pb-5 py-lg-0 d-flex justify-content-center ${variant ? "order-lg-first" : "order-lg-last"}`}
+    >
+      <img class="img-fluid" src={src} alt={alt} />
+    </div>
+    <div class="col-12 col-lg-8 pr-lg-5 text-center text-lg-start">
+      <h3>{title}</h3>
+      <p class="lead text-muted">{description}</p>
+    </div>
+  </div>
+</div>
