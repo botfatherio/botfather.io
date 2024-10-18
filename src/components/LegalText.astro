@@ -1,0 +1,15 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="container py-5">
+  <h1>{title}</h1>
+  <hr />
+  <div style="text-align: justify">
+    <slot />
+  </div>
+</div>

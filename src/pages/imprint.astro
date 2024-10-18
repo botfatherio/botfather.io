@@ -1,0 +1,20 @@
+---
+import { getEntry } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import BreadcrumbItem from "../components/BreadcrumbItem.astro";
+import LegalText from "../components/LegalText.astro";
+
+const imprint = await getEntry("legal", "imprint");
+const { Content } = await imprint.render();
+---
+
+<Layout title={imprint.data.title}>
+  <Breadcrumb>
+    <BreadcrumbItem label={imprint.data.title} />
+  </Breadcrumb>
+
+  <LegalText title={imprint.data.title}>
+    <Content />
+  </LegalText>
+</Layout>
