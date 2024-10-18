@@ -61,6 +61,9 @@ $spacers: (
   6: $spacer * 4,
 );
 
+$bootstrap-icons-font-dir: "/node_modules/bootstrap-icons/font/fonts";
+
+@import "bootstrap-icons/font/bootstrap-icons";
 @import "bootstrap/scss/bootstrap";
 
 .btn-primary {

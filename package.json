@@ -13,6 +13,7 @@
     "@popperjs/core": "^2.11.8",
     "astro": "^4.16.3",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "sass": "^1.80.1"
   },
   "devDependencies": {
