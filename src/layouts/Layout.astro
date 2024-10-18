@@ -1,5 +1,7 @@
 ---
 import "../styles/global.scss";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
@@ -16,8 +18,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body class="d-flex flex-column min-vh-100">
+    <Navbar />
+    <main role="main" class="flex-fill d-flex flex-column">
+      <slot />
+    </main>
+    <Footer />
     <script>
       import "bootstrap/dist/js/bootstrap";
     </script>

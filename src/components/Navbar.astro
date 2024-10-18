@@ -1,0 +1,57 @@
+---
+import NavLink from "./NavLink.astro";
+---
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="/">
+      <img
+        class="align-top"
+        src="/images/logo.png"
+        alt="botfather"
+        height="28"
+      />
+      <span>botfather</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <NavLink href="/downloads/" label="Downloads" />
+        </li>
+        <li class="nav-item">
+          <NavLink href="/scripts/" label="Scripts" />
+        </li>
+        <li class="nav-item">
+          <NavLink href="/blog/" label="Blog" />
+        </li>
+        <li class="nav-item">
+          <NavLink href="/docs/" label="Documentation" />
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li>
+          <a
+            class="btn btn-patreon text-white my-2 my-lg-0"
+            href="https://buymeacoffee.com/je"
+            target="_blank"
+          >
+            <i class="bi bi-cup-hot-fill"></i>
+            <b>Buy me a coffee</b>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
