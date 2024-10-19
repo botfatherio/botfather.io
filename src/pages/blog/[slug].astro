@@ -24,7 +24,7 @@ const prettyPubDate = post.data.pubDate.toLocaleDateString(undefined, {
 });
 ---
 
-<Layout title="Botfather Blog">
+<Layout title={post.data.title}>
   <Breadcrumb>
     <BreadcrumbItem href="/blog/" label="Blog" />
     <BreadcrumbItem label={post.data.title} />
