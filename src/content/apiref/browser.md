@@ -220,7 +220,7 @@ Most of the browsers resource modification methods take regular expressions as a
 browser.blockResource(".css");
 
 // Replace a requested resource
-browser.replaceResource(".png", "https://botfather.io/static/images/logo.png");
+browser.replaceResource(".png", "https://botfather.io/icons/logo.png");
 
 // Unmodify a single resource identified by the regular expression used before
 browser.unmodifyResource(".css");

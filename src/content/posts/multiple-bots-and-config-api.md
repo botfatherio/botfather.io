@@ -12,7 +12,7 @@ Script developers can define config options in a `manifest.json` file. Those opt
 
 Script developers are encouraged to add a manifest file to their bot and make GUI configuration available to their users.
 
-![Botfather 5.1 Config API Example](/media/blog/bf5_config_tab.png)
+![Botfather 5.1 Config API Example](/blog/bf5_config_tab.png)
 
 The config tab shown above is defined by the `manifest.json` file below. Make sure you validate your JSON markup. When there are errors Botfather will not show any config options for your script at all.
 
