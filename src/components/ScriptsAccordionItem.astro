@@ -1,0 +1,58 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  description: string;
+  gitUrl: string;
+}
+
+const { id, title, description, gitUrl } = Astro.props;
+const inputId = `${id}-input`;
+---
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button
+      class="accordion-button collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target={`#${id}`}
+      aria-expanded="false"
+      aria-controls={id}
+    >
+      {title}
+    </button>
+  </h2>
+  <div
+    id={id}
+    class="accordion-collapse collapse"
+    data-bs-parent="#scripts-accordion"
+  >
+    <div class="accordion-body gap-3">
+      <p>{description}</p>
+
+      <div class="input-group">
+        <div class="form-floating">
+          <input
+            id={inputId}
+            type="text"
+            class="form-control"
+            value={gitUrl}
+            readonly
+          />
+          <label for={inputId}>Git URL</label>
+        </div>
+
+        <a
+          class="btn btn-outline-primary d-flex align-items-center"
+          role="button"
+          href={gitUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

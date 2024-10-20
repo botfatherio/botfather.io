@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import BreadcrumbItem from "../components/BreadcrumbItem.astro";
+import ScriptsFAQ from "../components/ScriptsFAQ.astro";
+import ScriptsFAQItem from "../components/ScriptsFAQItem.astro";
+import ScriptsAccordion from "../components/ScriptsAccordion.astro";
+import ScriptsAccordionItem from "../components/ScriptsAccordionItem.astro";
+---
+
+<Layout title="Scripts">
+  <Breadcrumb>
+    <BreadcrumbItem label="Scripts" />
+  </Breadcrumb>
+
+  <div class="container my-5">
+    <h1 class="display-4">Scripts</h1>
+    <hr />
+    <div class="row gy-3">
+      <div class="col-md-4">
+        <ScriptsFAQ>
+          <ScriptsFAQItem
+            question="What are scripts?"
+            answer="Scripts contain instructions for Botfather on how to control an application."
+          />
+          <ScriptsFAQItem
+            question="Where to get scripts from?"
+            answer="You can either write your own scripts or clone them from GitHub and GitLab."
+          />
+          <ScriptsFAQItem
+            question="How to clone a script?"
+            answer='Click the "Clone bots" button in Botfather and paste a Git HTTPS clone URL.'
+          />
+          <ScriptsFAQItem
+            question="How to update scripts?"
+            answer="Botfather can automatically update scripts cloned from GitHub or GitLab."
+          />
+          <ScriptsFAQItem
+            question="How to create a script?"
+            answer="Follow our documentation and draw inspiration from our demo scripts."
+          />
+        </ScriptsFAQ>
+      </div>
+      <div class="col-md-8">
+        <ScriptsAccordion>
+          <ScriptsAccordionItem
+            id="browser-demo"
+            title="Browser Demo Script"
+            description="This script demonstrates how to open browser windows and how to interact with them."
+            gitUrl="https://github.com/botfatherio/website-login-demo.git"
+          />
+          <ScriptsAccordionItem
+            id="image-detection-demo"
+            title="Image Detection Demo Script"
+            description="This script demonstrates how to find the position of a reference image in a screenshot. This can be useful if you want to find a specific UI element to click on or otherwise interact with."
+            gitUrl="https://github.com/botfatherio/image-detection-demo.git"
+          />
+          <ScriptsAccordionItem
+            id="config-api-demo"
+            title="Config UI Demo Script"
+            description="This script demonstrates how to use the Config API to display config options in a bot's config tab and how to access these options in the script."
+            gitUrl="https://github.com/botfatherio/config-api-demo.git"
+          />
+          <ScriptsAccordionItem
+            id="sound-playback-demo"
+            title="Sound Playback Demo Script"
+            description="This script demonstrates how to use the Helper API to play a sound file. This can be useful for creating sound notifications."
+            gitUrl="https://github.com/botfatherio/sound-playback-demo.git"
+          />
+        </ScriptsAccordion>
+      </div>
+    </div>
+  </div>
+</Layout>
