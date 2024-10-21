@@ -32,11 +32,11 @@ var js = 'document.getElementById("play").click();';
 browser.executeJavascript(js); // Click the play button
 
 while (true) {
-  // Generate random position on screen
-  var random_point = browser.rect.randomPoint();
+    // Generate random position on screen
+    var random_point = browser.rect.randomPoint();
 
-  browser.moveMouseTo(random_point); // Guess what
-  Helper.sleep(3); // Do nothing for 3 seconds
+    browser.moveMouseTo(random_point); // Guess what
+    Helper.sleep(3); // Do nothing for 3 seconds
 }`}
     />
   </Jumbotron>
