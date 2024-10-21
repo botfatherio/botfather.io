@@ -11,6 +11,7 @@ export default defineConfig({
     "/docs/legal/privacy/": "/privacy/",
     "/docs/player/": "/docs/guides/",
     "/docs/player/what-is-botfather/": "/docs/guides/what-is-botfather/",
+    "/docs/player/cloning-scripts/": "/scripts/",
     "/docs/wizard/": "/docs/guides/",
     "/docs/wizard/how-to-create-a-script/":
       "/docs/guides/how-to-create-a-script/",
