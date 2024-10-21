@@ -24,7 +24,7 @@ const prettyPubDate = post.data.pubDate.toLocaleDateString(undefined, {
 });
 ---
 
-<Layout title={post.data.title}>
+<Layout title={post.data.title} description={post.data.lead}>
   <Breadcrumb>
     <BreadcrumbItem href="/blog/" label="Blog" />
     <BreadcrumbItem label={post.data.title} />
