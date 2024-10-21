@@ -2,7 +2,7 @@
 title: Color Type
 ---
 
-To represent colors the botfather script engine provides a `Color` type. Some botfather APIs take instances of `Color` as parameters. Feel free to use and extend the `Color` type yourself in your bot scripts.
+To represent colors the Botfather script engine provides a `Color` type. Some Botfather APIs take instances of `Color` as parameters. Feel free to use and extend the `Color` type yourself in your bot scripts.
 
 ## Table of contents
 
@@ -29,7 +29,7 @@ The _hue_ must be in range of 0-359. Both the _saturation_ and _value_ must be i
 
 Simple colors can be instantiated _using their name_. To create a variable representing green you could write: `var green = new Color('green');`
 
-The following inbuild color names can be used to instanciate `Color` variables in botfather scripts.
+The following inbuild color names can be used to instanciate `Color` variables in Botfather scripts.
 If you want to define a **_more complex color_** like _crimson_ or _teal_, use the RGB or HSV based instanciation discussed earlier.
 
 ##### Inbuild color names:

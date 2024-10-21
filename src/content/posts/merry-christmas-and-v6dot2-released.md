@@ -1,6 +1,6 @@
 ---
 pubDate: 2019-12-23
-title: Merry christmas! (botfather v6.2 released)
+title: Merry christmas! (Botfather v6.2 released)
 lead: Merry christmas everyone! I finally found some time to release BF v6.2 and update the Browser documentation. Hope the changes are welcome and useful. Happy automating!
 ---
 

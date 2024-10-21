@@ -53,7 +53,7 @@ browser.releaseKey("Ctrl");
 browser.pressKey("!");
 ```
 
-Pressing modifier keys to enter special characters such as "!" or "@" is not required. Instead write `browser.pressKey("!");` or `browser.pressKey("@");`. The botfather browser will try its best to enter the character specified. Still you might want to press certain modifier keys if you're e.g. testing a browser game. The same goes for other special keys.
+Pressing modifier keys to enter special characters such as "!" or "@" is not required. Instead write `browser.pressKey("!");` or `browser.pressKey("@");`. The Botfather browser will try its best to enter the character specified. Still you might want to press certain modifier keys if you're e.g. testing a browser game. The same goes for other special keys.
 
 #### Supported modifier keys and special keys:
 
@@ -111,6 +111,6 @@ flatpak run io.botfather.Botfather//beta
 
 ## Roadmap beyond Botfather 6
 
-Now that the new browser api and keyboard support are finally a thing, its time for us to update the other platform APIs aswell. Next will be the Android API possibly followed by the Desktop API. After that we'll replace Botfathers script engine. Thats the part of the program that interprets scripts written by developers. It lacks a lot of features such as using the `let` keyword or splitting scripts into multiple files.
+Now that the new browser api and keyboard support are finally a thing, its time for us to update the other platform APIs aswell. Next will be the Android API possibly followed by the Desktop API. After that we'll replace Botfather's script engine. Thats the part of the program that interprets scripts written by developers. It lacks a lot of features such as using the `let` keyword or splitting scripts into multiple files.
 
 While these new features are under development, Botfather 6 will be maintained as usually. We will ship bug fixes and introduce minor features and tweaks. Stay tuned.

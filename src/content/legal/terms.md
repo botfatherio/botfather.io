@@ -44,14 +44,14 @@ Based on: [Mustervorlage.net](http://www.mustervorlage.net/disclaimer-muster#Dis
 
 _Last updated: 11.08.2018_
 
-Please read this End-user License Agreement ("Agreement") carefully before clicking the "I Agree" checkbox, downloading or using a botfather application ("Application").
+Please read this End-user License Agreement ("Agreement") carefully before clicking the "I Agree" checkbox, downloading or using a Botfather application ("Application").
 
 By clicking the "I Agree" checkbox, downloading or using the Application, you are agreeing to be bound by the terms and conditions of this Agreement.
 If you do not agree to the terms of this Agreement, do not click on the "I Agree" checkbox and do not download or use the Application.
 
 #### License
 
-The botfather developer(s) grant you a revocable, non­exclusive, non­transferable, limited license to download, install and use the Application solely for your personal, non­commercial purposes strictly in accordance with the terms of this Agreement.
+The Botfather developer(s) grant you a revocable, non­exclusive, non­transferable, limited license to download, install and use the Application solely for your personal, non­commercial purposes strictly in accordance with the terms of this Agreement.
 
 #### Restrictions
 
@@ -61,7 +61,7 @@ You agree not to, and you will not permit others to:
 
 #### Modifications to Application
 
-The botfather developer(s) reserve the right to modify, suspend or discontinue, temporarily or permanently, the Application or any service to which it connects, with or without notice and without liability to you.
+The Botfather developer(s) reserve the right to modify, suspend or discontinue, temporarily or permanently, the Application or any service to which it connects, with or without notice and without liability to you.
 
 #### Limitations of Warranties
 
@@ -75,11 +75,11 @@ TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL THE BOTFATHER DEVELOPER
 
 #### Term and Termination
 
-This Agreement shall remain in effect until terminated by you or the botfather developer(s).
+This Agreement shall remain in effect until terminated by you or the Botfather developer(s).
 
-The botfather developers may, in its sole discretion, at any time and for any or no reason, suspend or terminate this Agreement with or without prior notice.
+The Botfather developers may, in its sole discretion, at any time and for any or no reason, suspend or terminate this Agreement with or without prior notice.
 
-This Agreement will terminate immediately, without prior notice from the botfather developers, in the event that you fail to comply with any provision of this Agreement. You may also terminate this Agreement by deleting the Application and all copies thereof from your mobile device or from your desktop.
+This Agreement will terminate immediately, without prior notice from the Botfather developers, in the event that you fail to comply with any provision of this Agreement. You may also terminate this Agreement by deleting the Application and all copies thereof from your mobile device or from your desktop.
 
 Upon termination of this Agreement, you shall cease all use of the Application and delete all copies of the Application from your mobile device or from your desktop.
 
@@ -89,7 +89,7 @@ If any provision of this Agreement is held to be unenforceable or invalid, such 
 
 #### Amendments to this Agreement
 
-The botfather developer(s) reserve the right, at its sole discretion, to modify or replace this Agreement at any time. If a revision is material we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+The Botfather developer(s) reserve the right, at its sole discretion, to modify or replace this Agreement at any time. If a revision is material we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
 
 #### Contact Information
 

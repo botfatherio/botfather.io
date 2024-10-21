@@ -8,11 +8,11 @@ EDIT: Originaly it was planned to release all those features at once with Botfat
 
 ##### Script manifest
 
-In the future bot scripts will have a manifest file. Manifest files allow us to add a proper script browser to the botfather client and a permission system.
+In the future bot scripts will have a manifest file. Manifest files allow us to add a proper script browser to the Botfather client and a permission system.
 
 ##### Inbuild Script Browser
 
-With the script browser in place one no longer has to head over to our website, pick a script and download it from Github/Bitbucket/Gitlab. Instead on opens botfathers buildin script browser and select which script to run. It then will be downlaoded and run automatically.
+With the script browser in place one no longer has to head over to our website, pick a script and download it from Github/Bitbucket/Gitlab. Instead on opens Botfather's buildin script browser and select which script to run. It then will be downlaoded and run automatically.
 
 ##### Permission system
 
@@ -26,6 +26,6 @@ To change this we'll introduce a script configuration system. Script developers 
 
 ##### What about 4.0 updates?
 
-While botfather 5.0 takes some time to develop we want to keep botfather 4.0 stable and accessible.
+While Botfather 5.0 takes some time to develop we want to keep Botfather 4.0 stable and accessible.
 
 We'll fix as much bugs as possible, eventually add minor features and work on linux packaging.

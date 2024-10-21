@@ -2,11 +2,11 @@
 title: Browser API (v5 and below)
 ---
 
-Botfathers Browser API can be used to control its integrated browser. It is Chromium based, super fast and all its functions can be controlled. Thus, when automating websites and browsergames, you should prefer the integrated browser over the [DesktopAPI](../apis/desktop). Like most of our APIs the Browser API is compatible with the [Vision API](../apis/vision). You can take screenshots, analyze them and click somewhere on the website in response.
+Botfather's Browser API can be used to control its integrated browser. It is Chromium based, super fast and all its functions can be controlled. Thus, when automating websites and browsergames, you should prefer the integrated browser over the [DesktopAPI](../apis/desktop). Like most of our APIs the Browser API is compatible with the [Vision API](../apis/vision). You can take screenshots, analyze them and click somewhere on the website in response.
 
 Additional to the "normal ways" to control browser, we provide methods to manipulate packages and modify other resources. Thats especialy usefull if you want to look for something on a website, but it's hard to detect. - In that case you can replace it with a resource that can be detected more easily.
 
-**Note:** In botfather 6.0 **multiple browser tabs** will be supported.
+**Note:** In Botfather 6.0 **multiple browser tabs** will be supported.
 
 ## Table of contents
 

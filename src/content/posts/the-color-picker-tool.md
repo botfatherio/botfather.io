@@ -1,7 +1,7 @@
 ---
 pubDate: 2020-10-07
 title: The Color Picker Tool (version 6.5.0)
-lead: In an afford to make the powerful blob detector and color range isolation more accessible, a HSV color picker tool has been added to botfather.
+lead: In an afford to make the powerful blob detector and color range isolation more accessible, a HSV color picker tool has been added to Botfather.
 ---
 
 ### Use case

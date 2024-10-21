@@ -8,7 +8,7 @@ Saw that small code snipped on our startpage? In this tutorial we'll program som
 
 While winning a game is difficult, **writing a simple bot for educational purposes** is simple.
 
-In this tutorial we will use botfathers [Browser API](../apiref/browser-api), [Vision API](../apiref/vision-api) and [Helper API](../apiref/helper-api).
+In this tutorial we will use Botfather's [Browser API](../apiref/browser-api), [Vision API](../apiref/vision-api) and [Helper API](../apiref/helper-api).
 
 ## Step 1: Loading the game
 
@@ -46,7 +46,7 @@ While executing javascript is the faster and more robust way, it's not always po
 
 #### Using browser javascript
 
-As shown on botfathers startpage we just have to find the HTML play button and click it using javascript. If you known HTML (Hypertext Markup Language) this is straight forward for you: Just write a little javascript code snipped and execute it using the `Browser.executeJavascript` method.
+As shown on Botfather's startpage we just have to find the HTML play button and click it using javascript. If you known HTML (Hypertext Markup Language) this is straight forward for you: Just write a little javascript code snipped and execute it using the `Browser.executeJavascript` method.
 
 For newcomers this might be confusing: We're writing bot scripts in javascript and sending a javascript to the browser to execute it there (dafuq?). If you don't know HTML you might want to ignore this section, but look at the _Using image recognition_ instead.
 

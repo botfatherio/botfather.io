@@ -12,7 +12,7 @@ Actually any text editor can be used to create Botfather scripts. We recomment y
 
 Every time you want to write a script `start by creating a folder` for it. This folder will contain the actual bot script and assets such as images, called templates, which can be used for object detection using the [Vision API](/docs/apiref/vision-api/).
 
-Once you have folder for your script open your code editor and create a new file. That file will be your script file and can be named anything (eg. `script.js`), just make sure it has `.js` as file extension. JS stands for Javascript, a popular programming language botfather scripts are written in.
+Once you have folder for your script open your code editor and create a new file. That file will be your script file and can be named anything (eg. `script.js`), just make sure it has `.js` as file extension. JS stands for Javascript, a popular programming language Botfather scripts are written in.
 
 ### Pick an API
 

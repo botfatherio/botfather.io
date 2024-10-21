@@ -2,7 +2,7 @@
 title: Margins Type
 ---
 
-The botfather engine provides an inbuild `Margins` type. Use it to represents margins in a convenient way.
+The Botfather engine provides an inbuild `Margins` type. Use it to represents margins in a convenient way.
 
 ## Table of contents
 

@@ -8,7 +8,7 @@ lead: Due to popular request a Stats API for displaying progress information has
 
 This update is powered by coffees donated trough [our buy me a coffee page](https://www.buymeacoffee.com/je). Thanks a lot!
 
-If botfather is useful to you or you just want to see more updates, consider buying me a coffee. Its really appreciated!
+If Botfather is useful to you or you just want to see more updates, consider buying me a coffee. Its really appreciated!
 
 ## About the Stats API
 
