@@ -102,3 +102,10 @@ $accordion-button-active-bg: var(--#{$prefix}accordion-bg);
 .btn-outline-info {
   @include button-outline-variant($botfather_cyan, $botfather_white);
 }
+
+.markdown .astro-code {
+  @extend .bg-light;
+  @extend .border;
+  @extend .rounded;
+  @extend .p-3;
+}

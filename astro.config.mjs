@@ -19,5 +19,8 @@ export default defineConfig({
   },
   markdown: {
     remarkPlugins: [[remarkToc, { heading: "Table of contents", maxDepth: 3 }]],
+    shikiConfig: {
+      theme: "github-light",
+    },
   },
 });

@@ -30,7 +30,7 @@ const prettyPubDate = post.data.pubDate.toLocaleDateString(undefined, {
     <BreadcrumbItem label={post.data.title} />
   </Breadcrumb>
 
-  <article class="container py-5">
+  <article class="container py-5 markdown">
     <h1>{post.data.title}</h1>
     <p class="text-muted"><small>{prettyPubDate}</small></p>
     <p class="lead">{post.data.lead}</p>
