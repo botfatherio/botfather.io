@@ -1,5 +1,5 @@
 ---
-title: The BlobTpl Type
+title: BlobTpl Type
 ---
 
 The BlobTpl is used to describe the shape and size of blobs. Such blobs can then be found on screenshots using the [Vision API](../vision)s `.findBlobs` method.

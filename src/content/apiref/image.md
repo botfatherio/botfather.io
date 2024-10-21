@@ -1,5 +1,5 @@
 ---
-title: The Image Type
+title: Image Type
 ---
 
 Whenever you want to work with images in bot scripts you need the inbuild `Image` type. Using the `Image` type images can be loaded into the script engine, manipulated and used in methods.

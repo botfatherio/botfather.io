@@ -1,5 +1,5 @@
 ---
-title: The Point Type
+title: Point Type
 ---
 
 Botfathers script engine provides an inbuild `Point` type. Use it to represents points in your bot scripts. Some botfather Api methods even require you to pass parameters being `Point` objects to them.

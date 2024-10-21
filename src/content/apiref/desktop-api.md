@@ -1,5 +1,5 @@
 ---
-title: The Desktop API
+title: Desktop API
 ---
 
 Botfathers Desktop API can be used for Windows and Linux desktop automation. The API provides methods to take screenshots and send fake keyboard and mouse input events. On Linux botfather registeres a fake hardware device to send input events, which can't be ignored by programs such as games. The Desktop API, like any other botfather API, is crossplatform. That means you can use the same code to automate both Windows and Linux desktops.

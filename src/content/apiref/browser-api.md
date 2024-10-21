@@ -1,5 +1,5 @@
 ---
-title: The Browser API (v5 and below)
+title: Browser API (v5 and below)
 ---
 
 Botfathers Browser API can be used to control its integrated browser. It is Chromium based, super fast and all its functions can be controlled. Thus, when automating websites and browsergames, you should prefer the integrated browser over the [DesktopAPI](../apis/desktop). Like most of our APIs the Browser API is compatible with the [Vision API](../apis/vision). You can take screenshots, analyze them and click somewhere on the website in response.

@@ -1,5 +1,5 @@
 ---
-title: The Android API
+title: Android API
 ---
 
 Using botfathers Android API any Android device connected to your PC can be automated. Also most Android emulators can be connected to botfather and automated. To do so botfather makes use of the [Android Debug Bridge](https://developer.android.com/studio/command-line/adb) (Adb for short). To use botfathers Android API one has to have Adb installed and eventually the Android **developer options** enabled on the connected Android device.

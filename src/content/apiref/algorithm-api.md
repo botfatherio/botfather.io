@@ -1,5 +1,5 @@
 ---
-title: The Algorithm API
+title: Algorithm API
 ---
 
 Botfathers Algorithm API is a collection of algorithms we thing are usefull for script creator.

@@ -1,5 +1,5 @@
 ---
-title: The URL Type
+title: URL Type
 ---
 
 Botfather has an inbuild `Url` type, that can be used to represent urls like _test.example.com/path/&query#fragment_. The `Url` type provides methods to retrieve and modify individual parts of the url.

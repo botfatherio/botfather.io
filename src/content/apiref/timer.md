@@ -1,5 +1,5 @@
 ---
-title: The Timer Type
+title: Timer Type
 ---
 
 This Timer type provides an interface for creating timers. Warning: The Timer type API has no been finalized yet and is subject to change.

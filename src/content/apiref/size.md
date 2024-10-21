@@ -1,5 +1,5 @@
 ---
-title: The Size Type
+title: Size Type
 ---
 
 Botfather has an inbuild `Size` type which can be used to represent sizes of anything two-dimensional. Furthermore some botfather Api methods require you to pass `Size` object parameters to their methods.

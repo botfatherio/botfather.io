@@ -1,5 +1,5 @@
 ---
-title: The Helper API
+title: Helper API
 ---
 
 ## Table of contents

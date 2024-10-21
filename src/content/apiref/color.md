@@ -1,5 +1,5 @@
 ---
-title: The Color Type
+title: Color Type
 ---
 
 To represent colors the botfather script engine provides a `Color` type. Some botfather APIs take instances of `Color` as parameters. Feel free to use and extend the `Color` type yourself in your bot scripts.

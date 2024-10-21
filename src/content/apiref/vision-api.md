@@ -1,5 +1,5 @@
 ---
-title: The Vision API
+title: Vision API
 ---
 
 The Vision APIs main purpose is to process images taken using the [Android API](../android-api), [Browser API](../browser-api) or [Desktop API](../desktop-api). But there is no restriction on that, any [Image](../image) can be processed by the Vision APIs methods.

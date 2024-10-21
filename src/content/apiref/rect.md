@@ -1,5 +1,5 @@
 ---
-title: The Rect Type
+title: Rect Type
 ---
 
 In bot scripts rectangles can be represented using botfathers inbuild `Rect` object. A `Rect` is described by it's top left corner and size. The `Rect` type provides methods to work with rectangles conveniently (rects short).

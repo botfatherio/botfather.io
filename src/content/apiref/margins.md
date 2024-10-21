@@ -1,5 +1,5 @@
 ---
-title: The Margins Type
+title: Margins Type
 ---
 
 The botfather engine provides an inbuild `Margins` type. Use it to represents margins in a convenient way.

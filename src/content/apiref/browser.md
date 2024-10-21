@@ -1,5 +1,5 @@
 ---
-title: The Browser Type (v6 and above)
+title: Browser Type (v6 and above)
 ---
 
 Botfather features an embedded Chromium based webbrowser that can be automated. Starting with Botfather version 6, multiple browsers can be automated simultaneously. Browsers run "headless" in the background by default. However, they can be inspected und controlled by users via browser windows.

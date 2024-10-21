@@ -1,5 +1,5 @@
 ---
-title: The Match Type
+title: Match Type
 ---
 
 Objects of type `Match` are usually returned by botfather Api methods. Matches describe where something has been found and how _good_ the match is.
