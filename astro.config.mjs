@@ -1,8 +1,10 @@
 import { defineConfig } from "astro/config";
 import remarkToc from "remark-toc";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://botfather.io",
   trailingSlash: "always",
   redirects: {
     "/docs/legal/": "/imprint/",
@@ -24,4 +26,5 @@ export default defineConfig({
       theme: "github-light",
     },
   },
+  integrations: [sitemap()],
 });
