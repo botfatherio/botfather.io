@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
 import BreadcrumbItem from "../components/BreadcrumbItem.astro";
 import Download from "../components/Download.astro";
+import iconLinux from "../assets/icons/icons8-linux-100.png";
+import iconWindows from "../assets/icons/icons8-windows8-100.png";
 ---
 
 <Layout title="Downloads">
@@ -16,7 +18,7 @@ import Download from "../components/Download.astro";
     <div class="row mb-3">
       <div class="col-12 col-md-6 col-lg-4 mb-3">
         <Download
-          src="/icons/icons8-linux-100.png"
+          src={iconLinux}
           alt="Linux Logo"
           title="Linux (Flatpak)"
           cpu="4 cores with 2.4 GHz is the lowest tested"
@@ -28,7 +30,7 @@ import Download from "../components/Download.astro";
       </div>
       <div class="col-12 col-md-6 col-lg-4 mb-3">
         <Download
-          src="/icons/icons8-windows8-100.png"
+          src={iconWindows}
           alt="Windows Logo"
           title="Windows"
           cpu="4 cores with 2.4 GHz is the lowest tested"

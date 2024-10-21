@@ -1,6 +1,9 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
 interface Props {
-  src: string;
+  src: ImageMetadata;
   alt: string;
   title: string;
   description: string;
@@ -15,7 +18,7 @@ const { src, alt, title, description, variant } = Astro.props;
     <div
       class={`col-12 col-lg-4 pb-5 py-lg-0 d-flex justify-content-center ${variant ? "order-lg-first" : "order-lg-last"}`}
     >
-      <img class="img-fluid" src={src} alt={alt} />
+      <Image class="img-fluid" src={src} alt={alt} />
     </div>
     <div class="col-12 col-lg-8 pr-lg-5 text-center text-lg-start">
       <h3>{title}</h3>

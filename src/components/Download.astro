@@ -1,6 +1,9 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
 interface Props {
-  src: string;
+  src: ImageMetadata;
   alt: string;
   title: string;
   cpu: string;
@@ -19,7 +22,7 @@ const { src, alt, title, cpu, gpu, ram, os, href } = Astro.props;
       class="py-5 justify-content-center align-items-center d-flex"
       style="height: 200px"
     >
-      <img class="mw-100 mh-100" src={src} alt={alt} />
+      <Image class="mw-100 mh-100" src={src} alt={alt} loading="eager" />
     </div>
 
     <h3 class="card-title">{title}</h3>

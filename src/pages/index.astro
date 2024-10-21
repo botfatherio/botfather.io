@@ -5,6 +5,12 @@ import CodeCard from "../components/CodeCard.astro";
 import Entrypoints from "../components/Entrypoints.astro";
 import Entrypoint from "../components/Entrypoint.astro";
 import Feature from "../components/Feature.astro";
+import iconDownloads from "../assets/icons/icons8-downloads-100.png";
+import iconCodeFile from "../assets/icons/icons8-code-file-100.png";
+import iconAutomation from "../assets/icons/icons8-automation-100.png";
+import iconAndroid from "../assets/icons/icons8-android-100.png"
+import iconWebDesign from "../assets/icons/icons8-web-design-100.png"
+import iconMonitor from "../assets/icons/icons8-monitor-100.png"
 ---
 
 <Layout
@@ -46,7 +52,7 @@ while (true) {
 
   <Entrypoints>
     <Entrypoint
-      src="/icons/icons8-downloads-100.png"
+      src={iconDownloads}
       alt="Botfather Downloads"
       title="Download"
       description="Get started by downloading the latest Botfather installer for Windows or Linux. No registration required."
@@ -54,7 +60,7 @@ while (true) {
       label="Downloads"
     />
     <Entrypoint
-      src="/icons/icons8-code-file-100.png"
+      src={iconCodeFile}
       alt="Get botfather scripts"
       title="Get scripts"
       description="Scripts tell Botfather what to do. Feel free to download and run scripts from our website. Or create you own scripts."
@@ -62,7 +68,7 @@ while (true) {
       label="Get scripts"
     />
     <Entrypoint
-      src="/icons/icons8-automation-100.png"
+      src={iconAutomation}
       alt="Automate"
       title="Automate"
       description="Automate your daily tasks, browser games or any desktop application with Botfather. No coding skills required."
@@ -74,7 +80,7 @@ while (true) {
   <hr />
 
   <Feature
-    src="/icons/icons8-android-100.png"
+    src={iconAndroid}
     alt="Botfather Android Bot"
     title="Android Bots"
     description="Android phones and emulators can be controlled by Botfather. Undetectable by apps, you can take screenshots, send taps, and type text to control them. There is no need to grind mobile games anymore."
@@ -83,7 +89,7 @@ while (true) {
   <hr />
 
   <Feature
-    src="/icons/icons8-web-design-100.png"
+    src={iconWebDesign}
     alt="Botfather Browser Bot"
     title="Browser Bots"
     description="Control any website or browser game you want. Botfather has an integrated browser that can be controlled like no other browser. Send requests, manipulate presentations, and analyze screenshots in no time."
@@ -93,7 +99,7 @@ while (true) {
   <hr />
 
   <Feature
-    src="/icons/icons8-monitor-100.png"
+    src={iconMonitor}
     alt="Botfather Desktop Bot"
     title="Desktop Bots"
     description="Any desktop application and game can be controlled using Botfather. Automate boring tasks by analyzing screenshots and sending keyboard and mouse input in response."

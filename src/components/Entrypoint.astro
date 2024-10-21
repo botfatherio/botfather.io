@@ -1,6 +1,9 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
 interface Props {
-  src: string;
+  src: ImageMetadata;
   alt: string;
   title: string;
   description: string;
@@ -14,7 +17,7 @@ const { src, alt, title, description, href, label } = Astro.props;
 <div class="col-md-4">
   <div class="card h-100">
     <div class="card-img-top py-5 d-flex justify-content-center">
-      <img src={src} alt={alt} />
+      <Image src={src} alt={alt} loading="eager" />
     </div>
     <div class="card-body d-flex flex-column">
       <h5 class="card-title">{title}</h5>
