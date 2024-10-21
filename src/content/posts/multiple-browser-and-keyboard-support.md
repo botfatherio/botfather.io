@@ -23,9 +23,9 @@ Developers can now use multiple browsers in their scripts. For this purpose brow
 
 ### Using multiple browsers in a Script
 
-To create a new Browser you need to provide a unique ```name``` and the browsers ```size```. The name is used to identify the browser and label it in the user interface. The size of the browser can't be changed by the user. That way developers do not have to worry about users changing the browsers size and thus altering the position on website elements.
+To create a new Browser you need to provide a unique `name` and the browsers `size`. The name is used to identify the browser and label it in the user interface. The size of the browser can't be changed by the user. That way developers do not have to worry about users changing the browsers size and thus altering the position on website elements.
 
-If you want to give your users a choice about a browsers size, make use of the ```Config API```.
+If you want to give your users a choice about a browsers size, make use of the `Config API`.
 
 ```javascript
 var browser1 = new Browser("Main Browser", new Size(1600, 800));
@@ -53,7 +53,7 @@ browser.releaseKey("Ctrl");
 browser.pressKey("!");
 ```
 
-Pressing modifier keys to enter special characters such as "!" or "@" is not required. Instead write ```browser.pressKey("!");``` or ```browser.pressKey("@");```. The botfather browser will try its best to enter the character specified. Still you might want to press certain modifier keys if you're e.g. testing a browser game. The same goes for other special keys.
+Pressing modifier keys to enter special characters such as "!" or "@" is not required. Instead write `browser.pressKey("!");` or `browser.pressKey("@");`. The botfather browser will try its best to enter the character specified. Still you might want to press certain modifier keys if you're e.g. testing a browser game. The same goes for other special keys.
 
 #### Supported modifier keys and special keys:
 
@@ -88,11 +88,11 @@ browser.leftClick(browser.rect.center);
 
 ## Other changes in version 6
 
-- The ```Point``` type now has a ```.distanceTo(other_point);` method
-- The ```Point``` types ```.manhattanLength``` method has been removed
-- The ```Timer``` types ```.elapsed``` method has been renamed to ```.getElapsedTime```
-- The ```Browser``` types ```.moveMouseTo``` method has been renamed to ```.moveMouse```
-- The ```botfather_helper``` program has been renamed to ```webhelper```
+- The `Point` type now has a ```.distanceTo(other_point);` method
+- The `Point` types `.manhattanLength` method has been removed
+- The `Timer` types `.elapsed` method has been renamed to `.getElapsedTime`
+- The `Browser` types `.moveMouseTo` method has been renamed to `.moveMouse`
+- The `botfather_helper` program has been renamed to `webhelper`
 - Hundreds of bugfixes and tweaks
 
 ## Beta available on flathub
@@ -111,6 +111,6 @@ flatpak run io.botfather.Botfather//beta
 
 ## Roadmap beyond Botfather 6
 
-Now that the new browser api and keyboard support are finally a thing, its time for us to update the other platform APIs aswell. Next will be the Android API possibly followed by the Desktop API. After that we'll replace Botfathers script engine. Thats the part of the program that interprets scripts written by developers. It lacks a lot of features such as using the ```let``` keyword or splitting scripts into multiple files.
+Now that the new browser api and keyboard support are finally a thing, its time for us to update the other platform APIs aswell. Next will be the Android API possibly followed by the Desktop API. After that we'll replace Botfathers script engine. Thats the part of the program that interprets scripts written by developers. It lacks a lot of features such as using the `let` keyword or splitting scripts into multiple files.
 
 While these new features are under development, Botfather 6 will be maintained as usually. We will ship bug fixes and introduce minor features and tweaks. Stay tuned.

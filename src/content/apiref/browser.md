@@ -238,7 +238,7 @@ var browser = new Browser("Test");
 
 // Set a custom user agent string
 browser.setUserAgent(
-  "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/81.0"
+  "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/81.0",
 );
 
 // Subsequent requests will use the custom user agent

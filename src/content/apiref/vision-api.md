@@ -8,7 +8,6 @@ Currently the Vision API provides methods to find subimages or blobs on images. 
 
 Mostly for debugging purposes the Vision API provides a `.markMatch` and `.markMatches` method. Those methods can be used to mark matches on a given image visually. That way you can check whether you choosed good parameters to find what you were looking for.
 
-
 ## Table of contents
 
 ## Access Vision API methods
@@ -21,10 +20,9 @@ var windows_icon = new Image("windows_icon.png");
 var match = Vision.findMatch(screenshot, windows_icon);
 ```
 
-
 ## Vision API methods
-------
 
+---
 
 ##### `Vision.findMaskedMatches(image, tpl, mask, threshold, max_matches);`
 
@@ -43,22 +41,18 @@ You can create mask manually or use the [Image](../image) objects `.createMaskFr
 
 **Note**: It's actually recommended to not use the `.findMaskedMatches`, but to use the `.findMatches` method with a lower `threshold` instead. Methods not taking a mask turned out to are more reliable.
 
-
 ##### `Vision.findMaskedMatch(image, tpl, mask, threshold);`
 
 This methods does the same as the `.findMaskedMatches` method, but always returns exactly one [Match](../match), instead of an array of matches.
 If the method couldn't a match, the returned match will be invalid.
 
-
 ##### `Vision.findMatches(image, tpl, threshold, max_matches);`
 
 This methods works the same as the `.findMaskedMatches` method, but does not take a mask as parameter.
 
-
 ##### `Vision.findMatch(image, tpl, threshold);`
 
 This methods works the same as the `.findMaskedMatch` method, but does not take a mask as parameter.
-
 
 ##### `Vision.findBlobs(image, blob_tpl, min_distance, min_repeatability);`
 
@@ -73,7 +67,6 @@ Finds light (white) blobs on the image as described by the `blob_tpl` and `min_d
 
 If you want to search for blobs of a specific color, filter all unwanted colors using the [Image](../image) objects `.isolateColorRange` method in beforehand.
 
-
 ##### `Vision.markMatches(image, matches, color, thickness);`
 
 - `image` ([Image](../image)): The image to draw the matches on (consider it's size).
@@ -84,7 +77,6 @@ If you want to search for blobs of a specific color, filter all unwanted colors 
 Draws a rectangle for each Match in the matches array in the provided `image`. The position and size of the rectangles are provided by the matches `.getRect` methods. The rectangles color will be the provided `color` parameter and `thickness` the rectangles thickness. Invalid matches, identified using the matches `.isValid` methods, are not drawn.
 
 The provided `image` should be the image one has found the matches on or at least an image of the same size. If an match is outside of the image, it won't be drawn.
-
 
 ##### `Vision.markMatch(image, match, color, thickness);`
 

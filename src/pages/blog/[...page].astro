@@ -10,7 +10,7 @@ import PostPagination from "../../components/PostPagination.astro";
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = await getCollection("posts");
   const sortedPosts = posts.sort(
-    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
   );
 
   return paginate(
@@ -20,7 +20,7 @@ export const getStaticPaths = (async ({ paginate }) => {
       pubDate: post.data.pubDate,
       lead: post.data.lead,
     })),
-    { pageSize: 4 }
+    { pageSize: 4 },
   );
 }) satisfies GetStaticPaths;
 
