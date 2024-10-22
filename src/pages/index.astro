@@ -22,14 +22,16 @@ import iconMonitor from "../assets/icons/icons8-monitor-100.png";
     subtitle="Android, Browser, Desktop controlling bots made easy"
     description="With Botfather, you can create cross-platform bots controlling Android devices and emulators, websites and browser games, or any desktop application using simple JavaScript and Botfather's API."
   >
-    <a class="btn btn-lg btn-info" href="/downloads/" slot="buttons">
-      <b>Downloads</b>&nbsp;
-      <i class="bi bi-file-earmark-arrow-down-fill"></i>
-    </a>
-    <a class="btn btn-lg btn-light" href="/scripts/" slot="buttons">
-      Get <b>Scripts</b>
-      <i class="bi bi-code-slash"></i>
-    </a>
+    <Fragment slot="buttons">
+      <a class="btn btn-lg btn-info d-flex gap-2" href="/downloads/">
+        <b>Downloads</b>
+        <i class="bi bi-file-earmark-arrow-down-fill"></i>
+      </a>
+      <a class="btn btn-lg btn-light d-flex gap-2" href="/scripts/">
+        <span>Get <b>Scripts</b></span>
+        <i class="bi bi-code-slash"></i>
+      </a>
+    </Fragment>
 
     <CodeCard
       filename="~/scripts/agar.io.js"
