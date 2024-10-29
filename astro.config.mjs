@@ -20,6 +20,12 @@ export default defineConfig({
       "/docs/guides/how-to-create-a-script/",
     "/docs/wizard/simple-agario-bot-tutorial/":
       "/docs/guides/simple-agario-bot-tutorial/",
+    ...Array(59)
+      .keys()
+      .reduce(
+        (acc, val) => ({ ...acc, [`/scripts/${val + 1}/`]: "/scripts/" }),
+        {},
+      ),
   },
   markdown: {
     remarkPlugins: [[remarkToc, { heading: "Table of contents", maxDepth: 3 }]],
