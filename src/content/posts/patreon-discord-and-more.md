@@ -20,6 +20,6 @@ In our last post we planned on completely refactoring Botfather and switch the s
 
 We already switch our building system to CMake, a well known building system that paths the way to open source Botfather eventually. We will start our opensource journey by turning individual parts of Botfather into standalone libraries which will then be made available on Github. Next step would be to rewrite the Botfather GUI and release it to the public aswell (given that we have enough funding at this point).
 
-### Edit:
+**Edit:**
 
-Unfortunately I had no time to maintain Patreon nor Discord, so both links have been removed.
+*Unfortunately I had no time to maintain Patreon nor Discord, so both links have been removed.*

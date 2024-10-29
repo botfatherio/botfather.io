@@ -16,7 +16,7 @@ Script developers are encouraged to add a manifest file to their bot and make GU
 
 The config tab shown above is defined by the `manifest.json` file below. Make sure you validate your JSON markup. When there are errors Botfather will not show any config options for your script at all.
 
-##### Example `manifest.json` file
+### Example `manifest.json` file
 
 ```json
 {
@@ -119,9 +119,9 @@ In a nutshell, the GUI has been rewritten to:
 
 We also changed our icon theme, feel free to let us know what you think about it. You might find some old icons in the browser window, thats because we're about to replace it and thus no longer touch it.
 
-#### Current multibot limitations
+### Current multibot limitations
 
-As earlier mentioned: the GUI now allows the user to start multiple bots at the same time. This is not the main feature of this update though and thus has some limitations:
+As mentioned earlier, the GUI now allows the user to start multiple bots at the same time. This is not the main feature of this update though and thus has some limitations:
 
 _Currently_ all bots share the same browser. Thus running more than one browser bot will cause chaos. This problem is subject to the next planned updated called the _Browsanity_ update. It will feature a reworked Browser API that allows you to have multiple browsers at once.
 

@@ -12,11 +12,11 @@ As teased in the previous two blog posts Botfather is now able to:
 
 Furthermore, there are coming a lot of fixes and tweaks with this new version.
 
-### Donations
+## Donations
 
 Currently I make no money from BF, but I have to pay for the website and domain every month. To cover these costs I added a "Buy me a coffee" button to see how that goes. If asking for donations doesn't work I'll try to add ads to the website (not the actual program).
 
-### Botfather 7
+## Botfather 7
 
 I did some prototyping and came to the conclusion that BF7 will probably switch its scripting language to Python and see a major redesign. Python will allow script/bot developers to use existing Python packages such as Tensorflow for proper machine learning. (Yes, I tried to integrate node.js, but their embedding API is atm very poor).
 

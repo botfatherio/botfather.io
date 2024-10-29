@@ -22,7 +22,7 @@ var match = Vision.findMatch(template);
 Desktop.leftClick(match.getRect().getCenter());
 ```
 
-#### Changelog
+## Changelog
 
 - Added Rect.marginsAdded
 - Added Rect.marginsSubtracted

@@ -18,7 +18,7 @@ The API is useful for showing progress related information such as "points colle
 
 Head over to the [Stats API docs](https://botfather.io/docs/apiref/stats-api/) to learn more.
 
-#### Other fixes
+## Other fixes
 
 There were some issues related to the browser types `pressKey`, `holdKey` and `releaseKey` methods. These have been adressed.
 
