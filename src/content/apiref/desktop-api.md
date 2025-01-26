@@ -301,3 +301,19 @@ These are all keycodes currently supported by Botfather's Desktop API:
 - "voldown"
 - "volumedown" (alias)
 - "volume_down" (alias)
+
+## Troubleshooting
+
+Common issues and solutions.
+
+### Mouse or keyboard input not working on Linux
+
+On Linux, the Desktop API uses a fake hardware device to send input events.
+This device is registered when the Desktop API is first used.
+It might take the userspace a few seconds to detect, initialize, and start listening to the device.
+If you encounter issues with mouse input not working on Linux, try adding a delay before the first mouse input event.
+
+```javascript
+Helper.sleep(5); // Give the userspace some time to detect the fake hardware device
+Desktop.moveMouse(new Point(100, 100));
+```
