@@ -171,7 +171,7 @@ A list of supported key codes can be found below the examples.
 
 ```javascript
 // Entering lowercase "a"
-Desktop.press("a");
+Desktop.pressKey("a");
 
 // Entering uppercase "A"
 Desktop.holdKey("shift");
