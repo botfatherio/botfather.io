@@ -22,4 +22,4 @@ We already switch our building system to CMake, a well known building system tha
 
 **Edit:**
 
-*Unfortunately I had no time to maintain Patreon nor Discord, so both links have been removed.*
+_Unfortunately I had no time to maintain Patreon nor Discord, so both links have been removed._
