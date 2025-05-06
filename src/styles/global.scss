@@ -1,7 +1,7 @@
 $bootstrap-icons-font-dir: "/node_modules/bootstrap-icons/font/fonts";
 
 @import "bootstrap-icons/font/bootstrap-icons";
-@import "../node_modules/bootstrap/scss/functions";
+@import "bootstrap/scss/functions";
 
 $botfather_black: hsl(0, 0%, 4%);
 $botfather_black-bis: hsl(0, 0%, 7%);
@@ -79,8 +79,8 @@ $spacers: (
   6: $spacer * 4,
 );
 
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/variables-dark";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
 
 $accordion-button-active-color: var(--#{$prefix}body-color);
 $accordion-button-active-bg: var(--#{$prefix}accordion-bg);

@@ -3,7 +3,6 @@ import remarkToc from "remark-toc";
 import sitemap from "@astrojs/sitemap";
 import fs from "fs/promises";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://botfather.io",
   trailingSlash: "always",
