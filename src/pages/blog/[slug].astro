@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import type { GetStaticPaths } from "astro";
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
@@ -9,13 +9,13 @@ export const getStaticPaths = (async () => {
   const posts = await getCollection("posts");
 
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: { post },
   }));
 }) satisfies GetStaticPaths;
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const prettyPubDate = post.data.pubDate.toLocaleDateString(undefined, {
   month: "long",

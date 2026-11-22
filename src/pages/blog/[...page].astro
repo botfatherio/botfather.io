@@ -15,7 +15,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 
   return paginate(
     sortedPosts.map((post) => ({
-      slug: post.slug,
+      slug: post.id,
       title: post.data.title,
       pubDate: post.data.pubDate,
       lead: post.data.lead,
