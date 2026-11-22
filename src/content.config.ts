@@ -1,14 +1,16 @@
-import { z, defineCollection } from "astro:content";
+import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const legalCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/legal" }),
   schema: z.object({
     title: z.string(),
   }),
 });
 
 const postsCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/posts" }),
   schema: z.object({
     pubDate: z.date(),
     title: z.string(),
@@ -17,14 +19,14 @@ const postsCollection = defineCollection({
 });
 
 const apirefCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/apiref" }),
   schema: z.object({
     title: z.string(),
   }),
 });
 
 const guidesCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/guides" }),
   schema: z.object({
     title: z.string(),
   }),

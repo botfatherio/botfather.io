@@ -20,7 +20,7 @@ const apiref = await getCollection("apiref");
       {
         apiref.map((reference) => (
           <DocsItem
-            href={`/docs/apiref/${reference.slug}/`}
+            href={`/docs/apiref/${reference.id}/`}
             title={reference.data.title}
           />
         ))

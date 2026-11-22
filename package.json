@@ -13,9 +13,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/markdown-remark": "^7.3.10",
+    "@astrojs/sitemap": "^3.7.6",
     "@popperjs/core": "^2.11.8",
-    "astro": "5.16.11",
+    "astro": "7.4.13",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "remark-toc": "^9.0.0",

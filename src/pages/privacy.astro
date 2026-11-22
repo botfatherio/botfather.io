@@ -1,12 +1,12 @@
 ---
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
 import BreadcrumbItem from "../components/BreadcrumbItem.astro";
 import LegalText from "../components/LegalText.astro";
 
-const privacy = await getEntry("legal", "privacy");
-const { Content } = await privacy.render();
+const privacy = await getEntry("legal", "privacy")!;
+const { Content } = await render(privacy);
 ---
 
 <Layout title={privacy.data.title}>

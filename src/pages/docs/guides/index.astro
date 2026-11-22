@@ -20,7 +20,7 @@ const guides = await getCollection("guides");
       {
         guides.map((guide) => (
           <DocsItem
-            href={`/docs/guides/${guide.slug}/`}
+            href={`/docs/guides/${guide.id}/`}
             title={guide.data.title}
           />
         ))
