@@ -23,35 +23,35 @@ Helper.log("The hard work took", timer.getElapsedTime(), "ms");
 
 ---
 
-##### `Timer.isRunning();`
+### `Timer.isRunning();`
 
 Return true if the timer has been started. Returns false if the timer has never been started or stopped by a call to stop().
 
-##### `Timer.start();`
+### `Timer.start();`
 
 Starts the timer.
 
-##### `Timer.restart();`
+### `Timer.restart();`
 
 Restarts the timer and returns the time elapsed since the previous start.
 
 The return value is 0 if the timer was not running, the timer though will be started anyway.
 
-##### `Timer.stop();`
+### `Timer.stop();`
 
 Stops the timer.
 
-##### `Timer.getElapsedTime();`
+### `Timer.getElapsedTime();`
 
 Returns the number of milliseconds since this timer was last started.
 
-##### `Timer.hasExpired(timeout_in_ms);`
+### `Timer.hasExpired(timeout_in_ms);`
 
 - `timeout_in_ms` (number): A timeout in milliseconds.
 
 Returns true if more than timeout `timeout_in_ms` milliseconds have elapsed.
 
-##### `Timer.msecsTo(other_timer);`
+### `Timer.msecsTo(other_timer);`
 
 - `other_timer` ([Timer](../timer)): Another timer object.
 

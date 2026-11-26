@@ -17,45 +17,45 @@ New `Point` objects can be created proving either the points _x_ and _y_ values 
 
 ---
 
-##### `Point.getX();`
+### `Point.getX();`
 
 Returns the points x value.
 
-##### `Point.setX(x);`
+### `Point.setX(x);`
 
 - `x` (number): The points new x value.
 
 Sets the points x value to `x`.
 
-##### `Point.getY();`
+### `Point.getY();`
 
 Returns the points y value.
 
-##### `Point.setY(y);`
+### `Point.setY(y);`
 
 - `y` (number): The points new y value.
 
 Sets the points y value to `y`.
 
-##### `Point.pointAdded(other_point);`
+### `Point.pointAdded(other_point);`
 
 - `other_point` ([Point](../point)): The point to be added
 
 Returns a [Point](../point) object that is the sum of this point and other_point; each component is added separately.
 
-##### `Point.pointSubtracted(other_point);`
+### `Point.pointSubtracted(other_point);`
 
 - `other_point` ([Point](../point)): The point to be substracted
 
 Returns a [Point](../point) object that is formed by subtracting other_point from this point; each component is subtracted separately.
 
-##### `Point.dotProduct(other_point);`
+### `Point.dotProduct(other_point);`
 
 - `other_point` ([Point](../point)): Another point.
 
 Returns the dot product of this point and the `other_point`.
 
-##### `Point.distanceTo(other_point);`
+### `Point.distanceTo(other_point);`
 
 - `other_point` ([Point](../point)): Another point.
 

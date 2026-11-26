@@ -2,13 +2,15 @@
 interface Props {
   href: string;
   title: string;
+  level?: 1 | 2;
 }
 
-const { href, title } = Astro.props;
+const { href, title, level = 2 } = Astro.props;
+const Heading = `h${level}` as "h1" | "h2";
 ---
 
 <section>
-  <h2><a href={href} class="text-body">{title}</a></h2>
+  <Heading class="h2"><a href={href} class="text-body">{title}</a></Heading>
   <hr />
   <div class="row gy-3">
     <slot />

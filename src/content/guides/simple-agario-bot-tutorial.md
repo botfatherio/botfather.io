@@ -44,7 +44,7 @@ There are two methods to solve this "problem". We could either take a screenshot
 
 While executing javascript is the faster and more robust way, it's not always possible. Executing javascript does only work on websites, neither on Android nor on the Desktop. Taking screenshots, finding subimages (templates) on it and clicking them always works.
 
-#### Using browser javascript
+### Using browser javascript
 
 As shown on Botfather's startpage we just have to find the HTML play button and click it using javascript. If you known HTML (Hypertext Markup Language) this is straight forward for you: Just write a little javascript code snipped and execute it using the `Browser.executeJavascript` method.
 
@@ -57,7 +57,7 @@ var click_script = "document.getElementById('play').click();";
 Browser.executeJavscript(click_script);
 ```
 
-#### Using image recognition
+### Using image recognition
 
 Mastering image recognition is what you want to create good bots. We'll employ a method called _template matching_. To do so we need a screenshot of the browser and an smaller image, called _template_, we want to find in the screenshot.
 

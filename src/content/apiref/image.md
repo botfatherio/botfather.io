@@ -28,85 +28,85 @@ Creating images using this method can be usefull e.g. to compare such images to 
 
 ---
 
-##### `Image.isNull();`
+### `Image.isNull();`
 
 A null image has all parameters set to zero and no allocated data.
 
-##### `Image.hasAlphaChannel();`
+### `Image.hasAlphaChannel();`
 
 Returns true if the image has a format that respects the alpha channel, otherwise returns false.
 
-##### `Image.getWidth();`
+### `Image.getWidth();`
 
 Returns the images width.
 
-##### `Image.getHeight();`
+### `Image.getHeight();`
 
 Returns the images height.
 
-##### `Image.getSize();`
+### `Image.getSize();`
 
 Returns the images [Size](../size).
 
-##### `Image.load(filepath);`
+### `Image.load(filepath);`
 
 - `filepath` (string): A absolute or relative image filepath. Relative file paths are considered relative to the bot script.
 
 Loads image data from `filepath`. Most common image file extensions are supported but .png files are strongly recommended.
 
-##### `Image.save(filepath);`
+### `Image.save(filepath);`
 
 - `filepath` (string): A absolute or relative image filepath. Relative file paths are considered relative to the bot script.
 
 Saves the image to `filepath`.
 
-##### `Image.fill(color);`
+### `Image.fill(color);`
 
 - `color` ([Color](../color)): A color object of the desired fill color.
 
 Fills the entire image with the given color.
 
-##### `Image.getPixelColor(position);`
+### `Image.getPixelColor(position);`
 
 - `position` ([Point](../point)): The pixels position on the image.
 
 Returns the color of the pixel at the given `position` as a [Color](../color) object.
 
-##### `Image.setPixelColor(position, color);`
+### `Image.setPixelColor(position, color);`
 
 - `position` ([Point](../point)): The pixels position on the image.
 - `color` ([Color](../color)): The desired new pixel color.
 
 Alters the pixels `color` at the given `position`.
 
-##### `Image.copy(sub_area);`
+### `Image.copy(sub_area);`
 
 - `sub_area` [Rect](../rect): The sub area of the image to copy.
 
 Returns a sub-area of the image as a new [Image](#).
 
-##### `Image.mirrored(horizontally, vertically);`
+### `Image.mirrored(horizontally, vertically);`
 
 - `horizontally` (boolean): Whether the image shall be mirrored horizontally.
 - `vertically` (boolean): Whether the image shall be mirrored vertically.
 
 Returns a mirror of the image as a new [Image](#) object.
 
-##### `Image.grayed();`
+### `Image.grayed();`
 
 Returns the image in grayscale format as a new [Image](#) object.
 
-##### `Image.createMaskFromColor(color);`
+### `Image.createMaskFromColor(color);`
 
 - `color` ([Color](../color)): The color used to create the mask.
 
 Creates and returns a mask for this image based on the given `color` value. The returned mask will be a new [Image](#). Pixels having the provided `color` will be black on the mask image, every other pixel white.
 
-##### `Image.createMaskFromAlpha();`
+### `Image.createMaskFromAlpha();`
 
 Builds and returns a mask [Image](../image) from the alpha channel of this image.
 
-##### `Image.isolateColorRange(min_color, max_color, keep_color);`
+### `Image.isolateColorRange(min_color, max_color, keep_color);`
 
 - `min_color` and `max_color` using the HSV color space as described in the [Color documentation](../color).
 - `min_color` ([Color](../color)): The min HSV color values isolated.
@@ -115,13 +115,13 @@ Builds and returns a mask [Image](../image) from the alpha channel of this image
 
 Turns all pixels black which are not in range of `min_color` and `max_color`. Pixels in range keep their color if `keep_color` is true or become white if false. The method calculates the range to isolate using the HSV color space. Thus it's good practise to instanciate `min_color` and `max_color` as HSV colors.
 
-##### `Image.countDifferentPixels(other_image);`
+### `Image.countDifferentPixels(other_image);`
 
 - `other_image` ([Image](../image)): Another image of this images size.
 
 Returns the number of pixels different on two images of the same size.
 
-##### `Image.pixelEqualityTo(other_image);`
+### `Image.pixelEqualityTo(other_image);`
 
 - `other_image` ([Image](../image)): Another image of this images size.
 

@@ -6,9 +6,9 @@ Botfather features an embedded Chromium based webbrowser that can be automated. 
 
 Botfather browsers can be used to automate many things such as loading websites, executing Javascript, sending click, scroll and keyboard events. Furthermore, browsers can take screenshots which then can be saved our analyzed using the [Vision API](../vision-api).
 
-### Table of contents
+## Table of contents
 
-### Create browsers and load websites
+## Create browsers and load websites
 
 ```javascript
 var browser1 = new Browser("Browser Name 1");
@@ -21,7 +21,7 @@ browser1.finishLoading(); // (default) waits max 30 seconds for the website to l
 browser2.finishLoading(10); // waits max 10 seconds for the website to load
 ```
 
-### Reload websites
+## Reload websites
 
 ```javascript
 var browser = new Browser("Test Browser");
@@ -34,7 +34,7 @@ browser.reload();
 browser.reloadIgnoringCache();
 ```
 
-### Stop loading websites
+## Stop loading websites
 
 ```javascript
 var browser = new Browser("Test Browser");
@@ -45,7 +45,7 @@ if (browser.isLoading()) {
 }
 ```
 
-### Go back and forward
+## Go back and forward
 
 ```javascript
 if (browser.canGoBack()) {
@@ -56,14 +56,14 @@ if (browser.canGoForward()) {
 }
 ```
 
-### Resize a browser
+## Resize a browser
 
 ```javascript
 var new_size = new Size(1000, 600);
 browser.resize(new_size);
 ```
 
-### Query basic browser information
+## Query basic browser information
 
 The `.getRect()` method return a [Rect](../rect) object, the `.getSize()` method a [Size](../size) object and the `.getUrl()` method a [Url](../url) object.
 
@@ -80,7 +80,7 @@ var url = browser.getUrl();
 var center = rect.getCenter();
 ```
 
-### Take screenshots of websites
+## Take screenshots of websites
 
 The `.takeScreenshot()` method returns an [Image](../image) object which can be saved or used with the [Vision API](../vision-api).
 
@@ -89,7 +89,7 @@ var image = browser.takeScreenshot();
 image.save("image.png");
 ```
 
-### Move the mouse and click
+## Move the mouse and click
 
 ```javascript
 // Move the mouse to the center of the browser
@@ -105,7 +105,7 @@ browser.middleClick(a_point);
 browser.rightClick(a_point);
 ```
 
-### Hold and release the mouse
+## Hold and release the mouse
 
 Holding a releasing is usefull for controlling games or performing a drag an drop.
 
@@ -122,7 +122,7 @@ browser.holdRight(a_point);
 browser.releaseRight(a_point);
 ```
 
-### Scroll the mouse wheel
+## Scroll the mouse wheel
 
 ```javascript
 var location = new Point(200, 200);
@@ -131,7 +131,7 @@ var pixels_vertically = 50;
 browser.scrollWHeel(location, pixels_horizontally, pixels_vertically);
 ```
 
-### Press keyboard keys and enter text
+## Press keyboard keys and enter text
 
 ```javascript
 var browser = new Browser("Test Browser", new Size(1400, 700));
@@ -145,7 +145,7 @@ browser.pressKey("!");
 
 Pressing modifier keys to enter special characters such as "!" or "@" is not required. Instead write `browser.pressKey("!");` or `browser.pressKey("@");`. The botfather browser will try its best to enter the character specified. Still you might want to press certain modifier keys if you're e.g. testing a browser game. The same goes for other special keys.
 
-##### Supported modifier keys and special keys:
+### Supported modifier keys and special keys:
 
 - "Ctrl"
 - "Alt"
@@ -161,7 +161,7 @@ Pressing modifier keys to enter special characters such as "!" or "@" is not req
 - "Backspace"
 - "Delete"
 
-### Execute Javascript
+## Execute Javascript
 
 Executes javascript_code in the browsers Javascript engine. This can be used to fill out login forms an sumit them. This method does not return anything.
 
@@ -170,7 +170,7 @@ var code = "document.body.style.background = red;";
 browser.executeJavascript(code);
 ```
 
-### Evaluate Javascript (experimental)
+## Evaluate Javascript (experimental)
 
 Scripts can now evalute arbitrary Javascript code in a Browser an use the returned value.
 
@@ -211,7 +211,7 @@ try {
 
 **Beware**: This is an experimental feature. At the point of writing evaluating `document;` still crashes a browsers `webhelper` process.
 
-### Manipulate or block responses
+## Manipulate or block responses
 
 Most of the browsers resource modification methods take regular expressions as arguments.
 
@@ -229,7 +229,7 @@ browser.unmodifyResource(".css");
 browser.unmodifyResources();
 ```
 
-### Setting a custom user agent
+## Setting a custom user agent
 
 Setting a custom user agent is useful for testing websites or webapps which expect a specific user agent.
 

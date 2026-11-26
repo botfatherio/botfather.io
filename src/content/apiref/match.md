@@ -15,26 +15,26 @@ You can create your own matches i.e. for custom match methods. An invalid match 
 
 ---
 
-##### `Match.getScore();`
+### `Match.getScore();`
 
 Returns the matches score. The score describes how good the match matches what has been searched for. A score of 0.0 means the match matches the subject 0%. 0.42 means the match matches 42% and 1.0 means the match matches 100%.
 
-##### `Match.setScore(new_score);`
+### `Match.setScore(new_score);`
 
 - `new_score` (number): A float number between 0.0 (0%) and 1.0 (100%).
 
 Sets the matches score to `new_score`.
 
-##### `Match.getRect();`
+### `Match.getRect();`
 
 Returns where the match matches the object searched for.
 
-##### `Match.setRect(new_rect);`
+### `Match.setRect(new_rect);`
 
 - `new_rect` ([Rect](../rect)): The rect describing where the match matches the searched for object.
 
 Sets the matches matching location/rect to `new_rect`.
 
-##### `Match.isValid();`
+### `Match.isValid();`
 
 Returns true if the matches score is greater than 0.0.

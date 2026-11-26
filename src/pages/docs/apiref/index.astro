@@ -16,10 +16,11 @@ const apiref = await getCollection("apiref");
   </Breadcrumb>
 
   <div class="container my-5">
-    <DocsSection href="/docs/apiref/" title="API Reference">
+    <DocsSection level={1} href="/docs/apiref/" title="API Reference">
       {
         apiref.map((reference) => (
           <DocsItem
+            level={2}
             href={`/docs/apiref/${reference.id}/`}
             title={reference.data.title}
           />

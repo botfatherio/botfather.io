@@ -13,7 +13,7 @@ The most common way to represent colors is by _using their RGB (red, gree, blue)
 Programs like [GIMP](https://www.gimp.org/) or [Paint.net](https://www.getpaint.net/doc/latest/ColorsWindow.html) can help you choose the `Color` you want to represent and it's RGB values.
 There are also tons of **_online tools_** available, just search for **_rgb color picker_** using your favourite search engine.
 
-##### Some RGB examples
+### Some RGB examples
 
 - `var gold = new Color(255,215,0);`
 - `var crimson = new Color(220,20,60);`
@@ -32,7 +32,7 @@ Simple colors can be instantiated _using their name_. To create a variable repre
 The following inbuild color names can be used to instanciate `Color` variables in Botfather scripts.
 If you want to define a **_more complex color_** like _crimson_ or _teal_, use the RGB or HSV based instanciation discussed earlier.
 
-##### Inbuild color names:
+### Inbuild color names:
 
 - `"black"`
 - `"blue"`
@@ -60,52 +60,52 @@ You can also create an initially invalid `Color` object bei neither providing a 
 
 ---
 
-##### `Color.isNull();`
+### `Color.isNull();`
 
 Returns true if the color is valid; otherwise returns false.
 
-##### `Color.getRed();`
+### `Color.getRed();`
 
 Returns a number between 0 and 255 representing the colors RGB red value.
 
-##### `Color.setRed(red_value);`
+### `Color.setRed(red_value);`
 
 - `red_value`: The colors new RGB red value (number between 0 and 255).
 
 Alters the colors RGB red value.
 
-##### `Color.getGreen();`
+### `Color.getGreen();`
 
 Returns a number between 0 and 255 representing the colors RGB green value.
 
-##### `Color.setGreen(green_value);`
+### `Color.setGreen(green_value);`
 
 - `green_value`: The colors new RGB green value (number between 0 and 255).
 
 Alters the colors RGB green value.
 
-##### `Color.getBlue();`
+### `Color.getBlue();`
 
 Returns a number between 0 and 255 representing the colors RGB blue value.
 
-##### `Color.setBlue(blue_value);`
+### `Color.setBlue(blue_value);`
 
 - `blue_value`: The colors new RGB blue value (number between 0 and 255).
 
 Alters the colors RGB blue value.
 
-##### `Color.setHsv(hue, saturation, value);`
+### `Color.setHsv(hue, saturation, value);`
 
 Sets the colors hue, saturation and value HSV color space components.
 
-##### `Color.getHue();`
+### `Color.getHue();`
 
 Returns the hue color HSV color space component of this color.
 
-##### `Color.getSaturation();`
+### `Color.getSaturation();`
 
 Returns the saturation color component of this color.
 
-##### `Color.getValue();`
+### `Color.getValue();`
 
 Returns the value color component of this color.

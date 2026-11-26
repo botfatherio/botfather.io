@@ -25,7 +25,7 @@ const { src, alt, title, cpu, gpu, ram, os, href } = Astro.props;
       <Image class="mw-100 mh-100" src={src} alt={alt} loading="eager" />
     </div>
 
-    <h3 class="card-title">{title}</h3>
+    <h2 class="card-title h3">{title}</h2>
     <div class="card-text flex-fill">
       <ul class="list-unstyled">
         <li><strong>CPU:</strong> {cpu}</li>

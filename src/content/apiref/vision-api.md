@@ -24,7 +24,7 @@ var match = Vision.findMatch(screenshot, windows_icon);
 
 ---
 
-##### `Vision.findMaskedMatches(image, tpl, mask, threshold, max_matches);`
+### `Vision.findMaskedMatches(image, tpl, mask, threshold, max_matches);`
 
 - `image` ([Image](../image)): The image to search the template on. (usually a screenshot).
 - `tpl` ([Image](../image)): The template searched for on the `image`.
@@ -41,20 +41,20 @@ You can create mask manually or use the [Image](../image) objects `.createMaskFr
 
 **Note**: It's actually recommended to not use the `.findMaskedMatches`, but to use the `.findMatches` method with a lower `threshold` instead. Methods not taking a mask turned out to are more reliable.
 
-##### `Vision.findMaskedMatch(image, tpl, mask, threshold);`
+### `Vision.findMaskedMatch(image, tpl, mask, threshold);`
 
 This methods does the same as the `.findMaskedMatches` method, but always returns exactly one [Match](../match), instead of an array of matches.
 If the method couldn't a match, the returned match will be invalid.
 
-##### `Vision.findMatches(image, tpl, threshold, max_matches);`
+### `Vision.findMatches(image, tpl, threshold, max_matches);`
 
 This methods works the same as the `.findMaskedMatches` method, but does not take a mask as parameter.
 
-##### `Vision.findMatch(image, tpl, threshold);`
+### `Vision.findMatch(image, tpl, threshold);`
 
 This methods works the same as the `.findMaskedMatch` method, but does not take a mask as parameter.
 
-##### `Vision.findBlobs(image, blob_tpl, min_distance, min_repeatability);`
+### `Vision.findBlobs(image, blob_tpl, min_distance, min_repeatability);`
 
 - `image` ([Image](../image)):
 - `blob_tpl` ([BlobTpl](../blobtpl)):
@@ -67,7 +67,7 @@ Finds light (white) blobs on the image as described by the `blob_tpl` and `min_d
 
 If you want to search for blobs of a specific color, filter all unwanted colors using the [Image](../image) objects `.isolateColorRange` method in beforehand.
 
-##### `Vision.markMatches(image, matches, color, thickness);`
+### `Vision.markMatches(image, matches, color, thickness);`
 
 - `image` ([Image](../image)): The image to draw the matches on (consider it's size).
 - `matches` ([Match](../match) Array): The matches to draw.
@@ -78,6 +78,6 @@ Draws a rectangle for each Match in the matches array in the provided `image`. T
 
 The provided `image` should be the image one has found the matches on or at least an image of the same size. If an match is outside of the image, it won't be drawn.
 
-##### `Vision.markMatch(image, match, color, thickness);`
+### `Vision.markMatch(image, match, color, thickness);`
 
 Does the same as the `.markMatches` method but only takes and draws a single match.

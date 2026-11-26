@@ -2,17 +2,19 @@
 interface Props {
   href: string;
   title: string;
+  level?: 2 | 3;
 }
 
-const { href, title } = Astro.props;
+const { href, title, level = 3 } = Astro.props;
+const Heading = `h${level}` as "h2" | "h3";
 ---
 
 <div class="col-12 col-md-6 col-lg-4">
   <div class="card h-100">
     <div class="card-body">
-      <h5 class="card-title mb-0">
+      <Heading class="card-title h5 mb-0">
         <a class="card-link stretched-link" href={href}>{title}</a>
-      </h5>
+      </Heading>
     </div>
   </div>
 </div>
