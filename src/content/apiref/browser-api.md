@@ -10,7 +10,7 @@ Additional to the "normal ways" to control browser, we provide methods to manipu
 
 ## Table of contents
 
-## Android API methods
+## Browser API methods
 
 ### `Browser.takeScreenshot();`
 
