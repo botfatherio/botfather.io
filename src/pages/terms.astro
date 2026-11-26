@@ -1,19 +1,13 @@
 ---
 import { getEntry, render } from "astro:content";
 import Layout from "@layouts/Layout.astro";
-import Breadcrumb from "@components/Breadcrumb.astro";
-import BreadcrumbItem from "@components/BreadcrumbItem.astro";
 import LegalText from "@components/LegalText.astro";
 
 const terms = await getEntry("legal", "terms")!;
 const { Content } = await render(terms);
 ---
 
-<Layout title={terms.data.title}>
-  <Breadcrumb>
-    <BreadcrumbItem label={terms.data.title} />
-  </Breadcrumb>
-
+<Layout title={terms.data.title} divider>
   <LegalText title={terms.data.title}>
     <Content />
   </LegalText>

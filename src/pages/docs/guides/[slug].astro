@@ -2,8 +2,6 @@
 import { getCollection, render } from "astro:content";
 import type { GetStaticPaths } from "astro";
 import Layout from "@layouts/Layout.astro";
-import Breadcrumb from "@components/Breadcrumb.astro";
-import BreadcrumbItem from "@components/BreadcrumbItem.astro";
 
 export const getStaticPaths = (async () => {
   const guides = await getCollection("guides");
@@ -18,13 +16,7 @@ const { guide } = Astro.props;
 const { Content } = await render(guide);
 ---
 
-<Layout title={guide.data.title}>
-  <Breadcrumb>
-    <BreadcrumbItem href="/docs/" label="Documentation" />
-    <BreadcrumbItem href="/docs/guides/" label="Guides" />
-    <BreadcrumbItem label={guide.data.title} />
-  </Breadcrumb>
-
+<Layout title={guide.data.title} divider>
   <article class="container py-5 markdown">
     <h1>{guide.data.title}</h1>
     <Content />

@@ -1,18 +1,12 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Breadcrumb from "@components/Breadcrumb.astro";
-import BreadcrumbItem from "@components/BreadcrumbItem.astro";
 import ScriptsFAQ from "@components/ScriptsFAQ.astro";
 import ScriptsFAQItem from "@components/ScriptsFAQItem.astro";
 import ScriptsAccordion from "@components/ScriptsAccordion.astro";
 import ScriptsAccordionItem from "@components/ScriptsAccordionItem.astro";
 ---
 
-<Layout title="Scripts">
-  <Breadcrumb>
-    <BreadcrumbItem label="Scripts" />
-  </Breadcrumb>
-
+<Layout title="Scripts" divider>
   <div class="container my-5">
     <h1 class="display-4">Scripts</h1>
     <hr />

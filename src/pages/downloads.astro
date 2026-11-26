@@ -1,17 +1,11 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Breadcrumb from "@components/Breadcrumb.astro";
-import BreadcrumbItem from "@components/BreadcrumbItem.astro";
 import Download from "@components/Download.astro";
 import iconLinux from "@assets/icons/icons8-linux-100.png";
 import iconWindows from "@assets/icons/icons8-windows8-100.png";
 ---
 
-<Layout title="Downloads">
-  <Breadcrumb>
-    <BreadcrumbItem label="Downloads" />
-  </Breadcrumb>
-
+<Layout title="Downloads" divider>
   <div class="container my-auto">
     <h1 class="display-4">Downloads</h1>
     <hr />

@@ -6,9 +6,10 @@ import Footer from "@components/Footer.astro";
 interface Props {
   title: string;
   description?: string;
+  divider?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, divider = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -29,7 +30,10 @@ const { title, description } = Astro.props;
   </head>
   <body class="d-flex flex-column min-vh-100">
     <Navbar />
-    <main role="main" class="flex-fill d-flex flex-column">
+    <main
+      role="main"
+      class:list={["flex-fill d-flex flex-column", { "border-top": divider }]}
+    >
       <slot />
     </main>
     <Footer />
