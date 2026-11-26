@@ -1,9 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../../layouts/Layout.astro";
-import Header from "../../../components/Header.astro";
-import DocsSection from "../../../components/DocsSection.astro";
-import DocsItem from "../../../components/DocsItem.astro";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import DocsSection from "@components/DocsSection.astro";
+import DocsItem from "@components/DocsItem.astro";
 
 const apiref = await getCollection("apiref");
 ---

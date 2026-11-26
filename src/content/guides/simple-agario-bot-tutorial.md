@@ -38,7 +38,7 @@ By default the `Browser.finishLoading` methodreturns `false` after 30 seconds, i
 
 After loading the games website, we're presented with the games start screen. Here we have to click the play button and optionaly enter a username.
 
-![Agar.io start screen](../../assets/docs/start-screen.png)
+![Agar.io start screen](@assets/docs/start-screen.png)
 
 There are two methods to solve this "problem". We could either take a screenshot, find the play button and click at it's location or execute some javascript in the browser to submit the login form.
 
@@ -71,7 +71,7 @@ var screenshot = Browser.takeScreenshot();
 
 On the screenshot we'll look for a _template_ of the play button shown below. Download and put it next to your script file.
 
-![Agar.io start screen](../../assets/docs/play-button.png)
+![Agar.io start screen](@assets/docs/play-button.png)
 
 To load the play buttons _template_ image we use the [Image](/docs/apiref/image/) constructor method. We store the loaded _template_ [Image](/docs/apiref/image/) object in a variable called `template`.
 

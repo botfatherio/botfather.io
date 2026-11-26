@@ -1,11 +1,11 @@
 ---
 import { getCollection } from "astro:content";
 import type { GetStaticPaths } from "astro";
-import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header.astro";
-import PostPreviews from "../../components/PostPreviews.astro";
-import PostPreview from "../../components/PostPreview.astro";
-import PostPagination from "../../components/PostPagination.astro";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import PostPreviews from "@components/PostPreviews.astro";
+import PostPreview from "@components/PostPreview.astro";
+import PostPagination from "@components/PostPagination.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = await getCollection("posts");

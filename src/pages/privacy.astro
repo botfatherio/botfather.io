@@ -1,9 +1,9 @@
 ---
 import { getEntry, render } from "astro:content";
-import Layout from "../layouts/Layout.astro";
-import Breadcrumb from "../components/Breadcrumb.astro";
-import BreadcrumbItem from "../components/BreadcrumbItem.astro";
-import LegalText from "../components/LegalText.astro";
+import Layout from "@layouts/Layout.astro";
+import Breadcrumb from "@components/Breadcrumb.astro";
+import BreadcrumbItem from "@components/BreadcrumbItem.astro";
+import LegalText from "@components/LegalText.astro";
 
 const privacy = await getEntry("legal", "privacy")!;
 const { Content } = await render(privacy);
