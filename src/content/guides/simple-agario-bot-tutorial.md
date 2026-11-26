@@ -12,27 +12,27 @@ In this tutorial, we will use Botfather's [Browser API](/docs/apiref/browser/), 
 
 ## Step 1: Loading the game
 
-The first thing our bot shall do is load the game's website `http://agar.io/`. To do so, we use the `Browser.loadUrl` method. This method is asynchronous, which means that it does not wait for the website to finish loading.
+First, our bot needs a browser. We create one using the [Browser](/docs/apiref/browser/) constructor and give it a name. The name labels the browser in Botfather's "Browsers" tab. Next, we load the game's website using the browser's `loadUrl` method. This method is asynchronous, which means that it does not wait for the website to finish loading.
 
 ```javascript
-Browser.loadUrl("http://agar.io/");
+browser.loadUrl("http://agar.io/");
 ```
 
 But we want the bot to wait for the website to finish loading. We could use a method such as `Helper.sleep` to wait for some seconds. But depending on the user's internet connection, we might be waiting too long or not long enough.
 
 ```javascript
-Browser.loadUrl("http://agar.io/");
+browser.loadUrl("http://agar.io/");
 Helper.sleep(10); // Wait for 10 seconds. This might be too long or not long enough for the website to load.
 ```
 
-Instead, we use the `Browser.finishLoading` method to make the browser wait for the website to finish loading. That way, the script will continue once the website has finished loading.
+Instead, we use the `browser.finishLoading` method to wait for the website to finish loading. That way, the script will continue once the website has finished loading.
 
 ```javascript
-Browser.loadUrl("http://agar.io/");
-Browser.finishLoading(); // Wait for the website to finish loading.
+browser.loadUrl("http://agar.io/");
+browser.finishLoading(); // Wait for the website to finish loading.
 ```
 
-By default, the `Browser.finishLoading` method returns `false` after 30 seconds if the website takes longer to load. Read the [Browser API documentation](/docs/apiref/browser/) to learn more.
+By default, the `browser.finishLoading` method returns `false` after 30 seconds if the website takes longer to load. Read the [Browser API documentation](/docs/apiref/browser/) to learn more.
 
 ## Step 2: Start the game
 
@@ -46,7 +46,7 @@ While executing JavaScript is the faster and more robust way, it's not always po
 
 ### Using browser JavaScript
 
-As shown on Botfather's start page, we just have to find the HTML play button and click it using JavaScript. If you know HTML (Hypertext Markup Language), this is straightforward for you: Just write a little JavaScript code snippet and execute it using the `Browser.executeJavascript` method.
+As shown on Botfather's start page, we just have to find the HTML play button and click it using JavaScript. If you know HTML (Hypertext Markup Language), this is straightforward for you: Just write a little JavaScript code snippet and execute it using the `browser.executeJavascript` method.
 
 For newcomers, this might be confusing: We're writing bot scripts in JavaScript and sending JavaScript to the browser to execute it there (dafuq?). If you don't know HTML, you might want to skip this section and look at _Using image recognition_ instead.
 
@@ -54,7 +54,7 @@ The play button element's ID is `play`. Using `document.getElementById`, we can 
 
 ```javascript
 var click_script = "document.getElementById('play').click();";
-Browser.executeJavascript(click_script);
+browser.executeJavascript(click_script);
 ```
 
 ### Using image recognition
@@ -63,10 +63,10 @@ Mastering image recognition is what you want in order to create good bots. We'll
 
 To get good results, called _matches_, you want your _template_ to look as distinct as possible. The _template_ must look the same as in the screenshot. Looking for a scaled version of it won't work.
 
-To take a screenshot of the browser, we use the `Browser.takeScreenshot` method. It will return an [Image](/docs/apiref/image/) object. We store the screenshot in a variable called `screenshot`.
+To take a screenshot of the browser, we use the `browser.takeScreenshot` method. It will return an [Image](/docs/apiref/image/) object. We store the screenshot in a variable called `screenshot`.
 
 ```javascript
-var screenshot = Browser.takeScreenshot();
+var screenshot = browser.takeScreenshot();
 ```
 
 In the screenshot, we'll look for the _template_ of the play button shown below. Download it and put it next to your script file.
@@ -91,19 +91,23 @@ var match = Vision.findMatch(screenshot, template, 0.95);
 
 Using the `Match.isValid` method, we can check whether the play button could be found.
 
-To click the play button, we use the `Browser.leftClick` method, which takes a [Point](/docs/apiref/point/) object. We want to click the center of the play button match. To do so, we use two methods: `Match.getRect` and `Rect.getCenter()`. Read the [Rect](/docs/apiref/rect/) object's documentation to learn more.
+To click the play button, we use the `browser.leftClick` method, which takes a [Point](/docs/apiref/point/) object. We want to click the center of the play button match. To do so, we use two methods: `Match.getRect` and `Rect.getCenter()`. Read the [Rect](/docs/apiref/rect/) object's documentation to learn more.
 
 ```javascript
 // Complete code using image recognition:
 
-var screenshot = Browser.takeScreenshot();
+var browser = new Browser("agar.io");
+browser.loadUrl("http://agar.io/");
+browser.finishLoading();
+
+var screenshot = browser.takeScreenshot();
 var template = new Image("play-button.png");
 
 var match = Vision.findMatch(screenshot, template, 0.95);
 
 if (match.isValid()) {
   var play_button_position = match.getRect().getCenter();
-  Browser.leftClick(play_button_position);
+  browser.leftClick(play_button_position);
 }
 ```
 
