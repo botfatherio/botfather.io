@@ -28,6 +28,6 @@ Take a look at what can be control using the API you choosed. Using the [Browser
 
 ## Vision is key
 
-Sooner or later you want to advance your bot and reac to things on the screen. To accomplish this the Android, Browser and Desktop APIs have a `.takeScreenshot()` method which returns and [Image](/docs/apiref/image-type/). The returned image can be used with the [Vision API](/docs/apiref/vision-api/) to find objects and react to them (eg. by clicking on them).
+Sooner or later you want to advance your bot and reac to things on the screen. To accomplish this the Android, Browser and Desktop APIs have a `.takeScreenshot()` method which returns and [Image](/docs/apiref/image/). The returned image can be used with the [Vision API](/docs/apiref/vision-api/) to find objects and react to them (eg. by clicking on them).
 
 Thats actually all you need to get started. Feel free to [explore scripts](/scripts/) published by others to see how they work and take inspiration.

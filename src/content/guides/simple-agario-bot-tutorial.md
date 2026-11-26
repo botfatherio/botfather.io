@@ -8,7 +8,7 @@ Saw that small code snipped on our startpage? In this tutorial we'll program som
 
 While winning a game is difficult, **writing a simple bot for educational purposes** is simple.
 
-In this tutorial we will use Botfather's [Browser API](../apiref/browser), [Vision API](../apiref/vision-api) and [Helper API](../apiref/helper-api).
+In this tutorial we will use Botfather's [Browser API](/docs/apiref/browser/), [Vision API](/docs/apiref/vision-api/) and [Helper API](/docs/apiref/helper-api/).
 
 ## Step 1: Loading the game
 
@@ -32,7 +32,7 @@ Browser.loadUrl("http://agar.io/");
 Browser.finishLoading(); // Wait for the website to finish loading.
 ```
 
-By default the `Browser.finishLoading` methodreturns `false` after 30 seconds, if the website takes longer to load. Read the [Browser API documentation](../apiref/browser) to learn more.
+By default the `Browser.finishLoading` methodreturns `false` after 30 seconds, if the website takes longer to load. Read the [Browser API documentation](/docs/apiref/browser/) to learn more.
 
 ## Step 2: Start the game
 
@@ -63,7 +63,7 @@ Mastering image recognition is what you want to create good bots. We'll employ a
 
 To get good results, called _matches_, you want your _template_ to look as distinct as possible. The _template_ must look the same as in the screenshot. Looking for a scaled version of it won't work.
 
-To take a screenshot of the browser we use the `Browser.takeScreenshot` method. It will return an [Image](../apiref/image) object. We store the screenshot in a variable called `screenshot`.
+To take a screenshot of the browser we use the `Browser.takeScreenshot` method. It will return an [Image](/docs/apiref/image/) object. We store the screenshot in a variable called `screenshot`.
 
 ```javascript
 var screenshot = Browser.takeScreenshot();
@@ -73,13 +73,13 @@ On the screenshot we'll look for a _template_ of the play button shown below. Do
 
 ![Agar.io start screen](../../assets/docs/play-button.png)
 
-To load the play buttons _template_ image we use the [Image](../apiref/image) constructor method. We store the loaded _template_ [Image](../apiref/image) object in a variable called `template`.
+To load the play buttons _template_ image we use the [Image](/docs/apiref/image/) constructor method. We store the loaded _template_ [Image](/docs/apiref/image/) object in a variable called `template`.
 
 ```javascript
 var template = new Image("play-button.png");
 ```
 
-It's time to use one a [Vision API](../apiref/vision-api) method. `Vision.findMatch` takes three parameters: A `screenshot`, a `template` and a `score` a returns a [Match](../apiref/match) object.
+It's time to use one a [Vision API](/docs/apiref/vision-api/) method. `Vision.findMatch` takes three parameters: A `screenshot`, a `template` and a `score` a returns a [Match](/docs/apiref/match/) object.
 
 The `match` object will tell us where the _template_ has been found on the _screenshot_. If there are multiple matches, the best one is returned.
 
@@ -91,7 +91,7 @@ var match = Vision.findMatch(screenshot, template, 0.95);
 
 Using the `Match.isValid` method we can check whether the play button could be found.
 
-To click the play button we use the `Browser.leftClick` method which takes a [Point](../apiref/point) object. We want to click the play button matches center. To do so we use two methods: `Match.getRect` and `Rect.getCenter()`. Read the [Rect](../apiref/point) objects documentation to learn more.
+To click the play button we use the `Browser.leftClick` method which takes a [Point](/docs/apiref/point/) object. We want to click the play button matches center. To do so we use two methods: `Match.getRect` and `Rect.getCenter()`. Read the [Rect](/docs/apiref/point/) objects documentation to learn more.
 
 ```javascript
 // Complete code using image recognition:
