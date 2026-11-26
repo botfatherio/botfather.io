@@ -35,13 +35,13 @@ Sets the sizes height to `height`.
 
 ### `Size.sizeAdded(other_size);`
 
-- `other_size` ([Size](../size)): The other size to be added
+- `other_size` ([Size](/docs/apiref/size/)): The other size to be added
 
 Returns the sum of this size and other_size; each component is added separately.
 
 ### `Size.sizeSubtracted(other_size);`
 
-- `other_size` ([Size](../size)): The other size to be substracted
+- `other_size` ([Size](/docs/apiref/size/)): The other size to be substracted
 
 Returns other_size subtracted from this size; each component is subtracted separately.
 

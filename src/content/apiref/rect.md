@@ -8,7 +8,7 @@ In bot scripts rectangles can be represented using Botfather's inbuild `Rect` ob
 
 ## Creating Rect objects
 
-A non empty `Rect` object can be created by providing the `Rects` _top left corner and size_ or it's _top left and bottom right corners_. The corner position must be represented using the [Point type](../point) and sizes using the [Size type](../size). Providing no parameters results in an empty rectangle being created.
+A non empty `Rect` object can be created by providing the `Rects` _top left corner and size_ or it's _top left and bottom right corners_. The corner position must be represented using the [Point type](/docs/apiref/point/) and sizes using the [Size type](/docs/apiref/size/). Providing no parameters results in an empty rectangle being created.
 
 - `var empty_rect = new Rect();`
 - `var also_empty_rect = new Rect(new Point(12, 34), new Size());`
@@ -39,23 +39,23 @@ Returns the coordinate of the rectangle's bottom edge.
 
 ### `Rect.getCenter();`
 
-Returns the center [Point](../point) of the rectangle.
+Returns the center [Point](/docs/apiref/point/) of the rectangle.
 
 ### `Rect.getTopLeft();`
 
-Returns the position of the rectangle's top-left corner as a [Point](../point).
+Returns the position of the rectangle's top-left corner as a [Point](/docs/apiref/point/).
 
 ### `Rect.getTopRight();`
 
-Returns the position of the rectangle's top-right corner as a [Point](../point).
+Returns the position of the rectangle's top-right corner as a [Point](/docs/apiref/point/).
 
 ### `Rect.getBottomLeft();`
 
-Returns the position of the rectangle's bottom-left corner as a [Point](../point).
+Returns the position of the rectangle's bottom-left corner as a [Point](/docs/apiref/point/).
 
 ### `Rect.getBottomRight();`
 
-Returns the position of the rectangle's bottom-right corner as a [Point](../point).
+Returns the position of the rectangle's bottom-right corner as a [Point](/docs/apiref/point/).
 
 ### `Rect.getWidth();`
 
@@ -79,7 +79,7 @@ Sets the height of the rectangle to the given `height`. The bottom edge is chang
 
 ### `Rect.getSize();`
 
-Returns the [Size](../size) of the rectangle.
+Returns the [Size](/docs/apiref/size/) of the rectangle.
 
 ### `Rect.moveTop(top);`
 
@@ -107,19 +107,19 @@ Moves the rectangle vertically, leaving the rectangle's bottom edge at the given
 
 ### `Rect.marginsAdded(margins)`
 
-- `margins` ([Margins](../margins)): The margins by which the rectangle shall be grown
+- `margins` ([Margins](/docs/apiref/margins/)): The margins by which the rectangle shall be grown
 
 Returns a rectangle grown by the margins.
 
 ### `Rect.marginsSubtracted(margins)`
 
-- `margins` ([Margins](../margins)): The margins by which the rectangle shall be shrinked
+- `margins` ([Margins](/docs/apiref/margins/)): The margins by which the rectangle shall be shrinked
 
 Removes the margins from the rectangle, shrinking it.
 
 ### `Rect.contains(point, proper);`
 
-- `point` ([Point](../point)): The point potentially contained in the rectangle.
+- `point` ([Point](/docs/apiref/point/)): The point potentially contained in the rectangle.
 - `proper` (boolean): See method description above. `proper` is false by default.
 
 Returns true if the given `point` is inside or on the edge of the rectangle, otherwise returns false.
@@ -127,7 +127,7 @@ If `proper` is true, this function only returns true if the given `point` is ins
 
 ### `Rect.contains(other_rect, proper);`
 
-- `other_rect` ([Rect](../rect)): The rect potentially contained in this rectangle.
+- `other_rect` ([Rect](/docs/apiref/rect/)): The rect potentially contained in this rectangle.
 - `proper` (boolean): See method description above. `proper` is false by default.
 
 Returns true if the given rectangle is inside this rectangle.
@@ -135,13 +135,13 @@ If `proper` is true, this function only returns true if the given `other_rect` i
 
 ### `Rect.intersects(other_rect);`
 
-- `other_rect` ([Rect](../rect)): The other rectangle.
+- `other_rect` ([Rect](/docs/apiref/rect/)): The other rectangle.
 
 Returns true if this rectangle intersects with the given rectangle, otherwise returns false.
 
 ### `Rect.united(other_rect);`
 
-- `other_rect` ([Rect](../rect)): The other rectangle.
+- `other_rect` ([Rect](/docs/apiref/rect/)): The other rectangle.
 
 Returns the bounding rectangle of this rectangle and the given `other_rect` rectangle as a new [Rect](#).
 

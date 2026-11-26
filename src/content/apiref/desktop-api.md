@@ -10,7 +10,7 @@ Botfather's Desktop API can be used for Windows and Linux desktop automation. Th
 
 One can take screenshots of your desktop and save them to a file or analyze them.
 
-A screenshot is an [Image](../image) object which can be analyzed using the [Vision API](../vision-api). For example, one could find elements (such as icons) on the screenshot and then use the found position to click there.
+A screenshot is an [Image](/docs/apiref/image/) object which can be analyzed using the [Vision API](/docs/apiref/vision-api/). For example, one could find elements (such as icons) on the screenshot and then use the found position to click there.
 
 ```javascript
 var screenshot = Desktop.takeScreenshot();
@@ -24,9 +24,9 @@ screenshot.save("screenshot1.png");
 
 When writting bots which shall work on multiple screen sizes, its useful to query the current screen size.
 
-Botfather provides two methods to do so. One returns the screen size as a [Size](../size) object, the other one as a [Rect](../rect) object.
+Botfather provides two methods to do so. One returns the screen size as a [Size](/docs/apiref/size/) object, the other one as a [Rect](/docs/apiref/rect/) object.
 
-The later one is useful if you want to get the center [Point](../point) of the screen.
+The later one is useful if you want to get the center [Point](/docs/apiref/point/) of the screen.
 
 ```javascript
 var screenSize = Desktop.getSize();
@@ -53,7 +53,7 @@ Desktop.warpCursor(new Point(0, 0);
 
 ### Getting the mouse position
 
-Botfather provides a method for getting the current mouse position as a [Point](../point) object. This may be useful when performing movement relative to the current mouse position.
+Botfather provides a method for getting the current mouse position as a [Point](/docs/apiref/point/) object. This may be useful when performing movement relative to the current mouse position.
 
 ```javascript
 var mousePositionPoint = Desktop.getCursorPosition();

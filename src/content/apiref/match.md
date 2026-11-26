@@ -6,7 +6,7 @@ Objects of type `Match` are usually returned by Botfather Api methods. Matches d
 
 ## Match object instanciation
 
-You can create your own matches i.e. for custom match methods. An invalid match can be created passing nothing to the matches constructor; its score will be **-**1.0. To create an valid `Match` one has to provide a [Rect](../rect/) describing the matches location and the matches score. The matches score tells how _good_ the match is. _1.0_ meaning the match matches the searched object 100% and 0.0 meaning the match isn't even valid. (1.0 = 100%, 0.5 = 50%, 0.35 = 35%).
+You can create your own matches i.e. for custom match methods. An invalid match can be created passing nothing to the matches constructor; its score will be **-**1.0. To create an valid `Match` one has to provide a [Rect](/docs/apiref/rect/) describing the matches location and the matches score. The matches score tells how _good_ the match is. _1.0_ meaning the match matches the searched object 100% and 0.0 meaning the match isn't even valid. (1.0 = 100%, 0.5 = 50%, 0.35 = 35%).
 
 - `var invalid_match = new Match();`
 - `var good_match = new Match(new Rect(40, 75, 100, 100), 0.97);`
@@ -31,7 +31,7 @@ Returns where the match matches the object searched for.
 
 ### `Match.setRect(new_rect);`
 
-- `new_rect` ([Rect](../rect)): The rect describing where the match matches the searched for object.
+- `new_rect` ([Rect](/docs/apiref/rect/)): The rect describing where the match matches the searched for object.
 
 Sets the matches matching location/rect to `new_rect`.
 

@@ -2,9 +2,9 @@
 title: BlobTpl Type
 ---
 
-The BlobTpl is used to describe the shape and size of blobs. Such blobs can then be found on screenshots using the [Vision API](../vision-api)s `.findBlobs` method.
+The BlobTpl is used to describe the shape and size of blobs. Such blobs can then be found on screenshots using the [Vision API](/docs/apiref/vision-api/)s `.findBlobs` method.
 
-If you want to look for blobs of a certain color, isolate that color on your [Image](../image) in beforehand. To do you used the [Image](../image) types `.isolateColorRange` method. After doing so only blobs of the desired color are left.
+If you want to look for blobs of a certain color, isolate that color on your [Image](/docs/apiref/image/) in beforehand. To do you used the [Image](/docs/apiref/image/) types `.isolateColorRange` method. After doing so only blobs of the desired color are left.
 
 ## Table of Contents
 

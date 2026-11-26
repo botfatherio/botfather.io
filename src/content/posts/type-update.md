@@ -4,7 +4,7 @@ title: Type Update released (version 4.1.0)
 lead: Today Botfather version 4.1.0, better known as the Type Update released. 9 different types have been added to botfahters script engine and the APIs methods have been updated to take some of them as parameters.
 ---
 
-From now on it's best pratice to use the new inbuild types [Point](/docs/apiref/point), [Size](/docs/apiref/size), [Rect](/docs/apiref/rect), [Image](/docs/apiref/image), [Margins](/docs/apiref/margins), [Color](/docs/apiref/color), [Url](/docs/apiref/url), [Match](/docs/apiref/match) and [BlobTpl](/docs/apiref/blobtpl) instead of custom Javascript types.
+From now on it's best pratice to use the new inbuild types [Point](/docs/apiref/point/), [Size](/docs/apiref/size/), [Rect](/docs/apiref/rect/), [Image](/docs/apiref/image/), [Margins](/docs/apiref/margins/), [Color](/docs/apiref/color/), [Url](/docs/apiref/url/), [Match](/docs/apiref/match/) and [BlobTpl](/docs/apiref/blobtpl/) instead of custom Javascript types.
 
 The inbuild types come with a lot of methods. For instance one can get a random point from within a rectangle or create an image providing a color and a size.
 Check out Botfather's [documentation](/docs/) to learn about more than 100 handy methods and how to use them.

@@ -26,14 +26,14 @@ Starts the app identified by it's package name. This method returns true if star
 
 ### `Android.sendTap(location);`
 
-- `location` ([Point](../point)): where to tap.
+- `location` ([Point](/docs/apiref/point/)): where to tap.
 
 Sends an tap event to the specified `location` coordinates on the android devices screen. Returns true if sending the tap succeeded; returns false otherwise.
 
 ### `Android.sendSwipe(start, end, duration_in_ms);`
 
-- `start` ([Point](../point)): The start location of the swipe.
-- `end` ([Point](../point)): The end location of the swipe.
+- `start` ([Point](/docs/apiref/point/)): The start location of the swipe.
+- `end` ([Point](/docs/apiref/point/)): The end location of the swipe.
 - `duration_in_ms` (number): The duration of the swipe in milliseconds. Default: 500
 
 Sends a swipe event from the `start` location to the `end` location. `duration_in_ms` specifies how long the swipe takes. Returns true if sending the swipe event succeeded; returns false otherwise.
@@ -54,12 +54,12 @@ Returns on success, false otherwise.
 
 ### `Android.takeScreenshot();`
 
-Creates and returns an screenshot [Image](../image) object.
+Creates and returns an screenshot [Image](/docs/apiref/image/) object.
 
 ### `Android.getSize();`
 
-Returns the Android devices screen size as a [Size](../size) object.
+Returns the Android devices screen size as a [Size](/docs/apiref/size/) object.
 
 ### `Android.getRect();`
 
-Returns the Android devices screen size as a [Rect](../rect) object.
+Returns the Android devices screen size as a [Rect](/docs/apiref/rect/) object.

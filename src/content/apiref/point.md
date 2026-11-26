@@ -39,24 +39,24 @@ Sets the points y value to `y`.
 
 ### `Point.pointAdded(other_point);`
 
-- `other_point` ([Point](../point)): The point to be added
+- `other_point` ([Point](/docs/apiref/point/)): The point to be added
 
-Returns a [Point](../point) object that is the sum of this point and other_point; each component is added separately.
+Returns a [Point](/docs/apiref/point/) object that is the sum of this point and other_point; each component is added separately.
 
 ### `Point.pointSubtracted(other_point);`
 
-- `other_point` ([Point](../point)): The point to be substracted
+- `other_point` ([Point](/docs/apiref/point/)): The point to be substracted
 
-Returns a [Point](../point) object that is formed by subtracting other_point from this point; each component is subtracted separately.
+Returns a [Point](/docs/apiref/point/) object that is formed by subtracting other_point from this point; each component is subtracted separately.
 
 ### `Point.dotProduct(other_point);`
 
-- `other_point` ([Point](../point)): Another point.
+- `other_point` ([Point](/docs/apiref/point/)): Another point.
 
 Returns the dot product of this point and the `other_point`.
 
 ### `Point.distanceTo(other_point);`
 
-- `other_point` ([Point](../point)): Another point.
+- `other_point` ([Point](/docs/apiref/point/)): Another point.
 
 Returns the distance from this point to the `other_point`.

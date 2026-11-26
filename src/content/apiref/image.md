@@ -17,7 +17,7 @@ The image filepath provided should be stored relative to the script file. Absolu
 
 ## Creating an image
 
-Images can also be created providing their [Size](../size) and optionally a [Color](../color). The image will be _null_ (`Image.isNull();` will return true) if no color has been provided.
+Images can also be created providing their [Size](/docs/apiref/size/) and optionally a [Color](/docs/apiref/color/). The image will be _null_ (`Image.isNull();` will return true) if no color has been provided.
 
 - `var red_50x50_image = new Image(new Size(50, 50), new Color("red"));`
 - `var invalid_image = new Image(new Size(100, 100);`
@@ -46,7 +46,7 @@ Returns the images height.
 
 ### `Image.getSize();`
 
-Returns the images [Size](../size).
+Returns the images [Size](/docs/apiref/size/).
 
 ### `Image.load(filepath);`
 
@@ -62,26 +62,26 @@ Saves the image to `filepath`.
 
 ### `Image.fill(color);`
 
-- `color` ([Color](../color)): A color object of the desired fill color.
+- `color` ([Color](/docs/apiref/color/)): A color object of the desired fill color.
 
 Fills the entire image with the given color.
 
 ### `Image.getPixelColor(position);`
 
-- `position` ([Point](../point)): The pixels position on the image.
+- `position` ([Point](/docs/apiref/point/)): The pixels position on the image.
 
-Returns the color of the pixel at the given `position` as a [Color](../color) object.
+Returns the color of the pixel at the given `position` as a [Color](/docs/apiref/color/) object.
 
 ### `Image.setPixelColor(position, color);`
 
-- `position` ([Point](../point)): The pixels position on the image.
-- `color` ([Color](../color)): The desired new pixel color.
+- `position` ([Point](/docs/apiref/point/)): The pixels position on the image.
+- `color` ([Color](/docs/apiref/color/)): The desired new pixel color.
 
 Alters the pixels `color` at the given `position`.
 
 ### `Image.copy(sub_area);`
 
-- `sub_area` [Rect](../rect): The sub area of the image to copy.
+- `sub_area` [Rect](/docs/apiref/rect/): The sub area of the image to copy.
 
 Returns a sub-area of the image as a new [Image](#).
 
@@ -98,31 +98,31 @@ Returns the image in grayscale format as a new [Image](#) object.
 
 ### `Image.createMaskFromColor(color);`
 
-- `color` ([Color](../color)): The color used to create the mask.
+- `color` ([Color](/docs/apiref/color/)): The color used to create the mask.
 
 Creates and returns a mask for this image based on the given `color` value. The returned mask will be a new [Image](#). Pixels having the provided `color` will be black on the mask image, every other pixel white.
 
 ### `Image.createMaskFromAlpha();`
 
-Builds and returns a mask [Image](../image) from the alpha channel of this image.
+Builds and returns a mask [Image](/docs/apiref/image/) from the alpha channel of this image.
 
 ### `Image.isolateColorRange(min_color, max_color, keep_color);`
 
-- `min_color` and `max_color` using the HSV color space as described in the [Color documentation](../color).
-- `min_color` ([Color](../color)): The min HSV color values isolated.
-- `max_color` ([Color](../color)): The max HSV color values isolated.
+- `min_color` and `max_color` using the HSV color space as described in the [Color documentation](/docs/apiref/color/).
+- `min_color` ([Color](/docs/apiref/color/)): The min HSV color values isolated.
+- `max_color` ([Color](/docs/apiref/color/)): The max HSV color values isolated.
 - `keep_color` Whether pixels with their color being in range of `min_color` and `keep_color` shall keep their original color. If false, their pixel color will become white.
 
 Turns all pixels black which are not in range of `min_color` and `max_color`. Pixels in range keep their color if `keep_color` is true or become white if false. The method calculates the range to isolate using the HSV color space. Thus it's good practise to instanciate `min_color` and `max_color` as HSV colors.
 
 ### `Image.countDifferentPixels(other_image);`
 
-- `other_image` ([Image](../image)): Another image of this images size.
+- `other_image` ([Image](/docs/apiref/image/)): Another image of this images size.
 
 Returns the number of pixels different on two images of the same size.
 
 ### `Image.pixelEqualityTo(other_image);`
 
-- `other_image` ([Image](../image)): Another image of this images size.
+- `other_image` ([Image](/docs/apiref/image/)): Another image of this images size.
 
 Calculates the percentage of pixels being the same color and position on both images. (Internally this method uses the `Image.countDifferentPixels` method).

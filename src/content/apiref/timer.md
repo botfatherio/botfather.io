@@ -53,6 +53,6 @@ Returns true if more than timeout `timeout_in_ms` milliseconds have elapsed.
 
 ### `Timer.msecsTo(other_timer);`
 
-- `other_timer` ([Timer](../timer)): Another timer object.
+- `other_timer` ([Timer](/docs/apiref/timer/)): Another timer object.
 
 Returns the number of milliseconds between this timer and `other_timer`.

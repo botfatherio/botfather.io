@@ -4,7 +4,7 @@ title: 4.2.0 Fixes and missing methods
 lead: Version 4.2.0 released featuring mainly bugfixes and addition of small methods.
 ---
 
-Note that we renamed the [Image](/docs/apiref/Image) objects `.pixelEqualityTo` method to `.pixelEquality`. (We removed the "to").
+Note that we renamed the [Image](/docs/apiref/image/) objects `.pixelEqualityTo` method to `.pixelEquality`. (We removed the "to").
 
 Check out the changelog below to see which methods have been added.
 

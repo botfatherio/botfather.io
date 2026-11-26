@@ -65,12 +65,12 @@ Sets the bottom margin to `bottom`.
 
 ### `Margins.marginsAdded(other_margins)`
 
-- `margins` ([Margins](../margins)): The other margins
+- `margins` ([Margins](/docs/apiref/margins/)): The other margins
 
-Returns a [Margins](../margins) object that is the sum of other_margins and this margins object; each component is added separately.
+Returns a [Margins](/docs/apiref/margins/) object that is the sum of other_margins and this margins object; each component is added separately.
 
 ### `Margins.marginsSubtracted(other_margins)`
 
-- `margins` ([Margins](../margins)): The other margins
+- `margins` ([Margins](/docs/apiref/margins/)): The other margins
 
-Returns a [Margins](../margins) object that is formed by subtracting other_margins from this margins object; each component is subtracted separately.
+Returns a [Margins](/docs/apiref/margins/) object that is formed by subtracting other_margins from this margins object; each component is subtracted separately.

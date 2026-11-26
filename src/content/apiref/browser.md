@@ -4,7 +4,7 @@ title: Browser Type
 
 Botfather features an embedded Chromium based webbrowser that can be automated. Starting with Botfather version 6, multiple browsers can be automated simultaneously. Browsers run "headless" in the background by default. However, they can be inspected und controlled by users via browser windows.
 
-Botfather browsers can be used to automate many things such as loading websites, executing Javascript, sending click, scroll and keyboard events. Furthermore, browsers can take screenshots which then can be saved our analyzed using the [Vision API](../vision-api).
+Botfather browsers can be used to automate many things such as loading websites, executing Javascript, sending click, scroll and keyboard events. Furthermore, browsers can take screenshots which then can be saved our analyzed using the [Vision API](/docs/apiref/vision-api/).
 
 ## Table of contents
 
@@ -65,7 +65,7 @@ browser.resize(new_size);
 
 ## Query basic browser information
 
-The `.getRect()` method return a [Rect](../rect) object, the `.getSize()` method a [Size](../size) object and the `.getUrl()` method a [Url](../url) object.
+The `.getRect()` method return a [Rect](/docs/apiref/rect/) object, the `.getSize()` method a [Size](/docs/apiref/size/) object and the `.getUrl()` method a [Url](/docs/apiref/url/) object.
 
 ```javascript
 if (browser.isLoading()) {
@@ -82,7 +82,7 @@ var center = rect.getCenter();
 
 ## Take screenshots of websites
 
-The `.takeScreenshot()` method returns an [Image](../image) object which can be saved or used with the [Vision API](../vision-api).
+The `.takeScreenshot()` method returns an [Image](/docs/apiref/image/) object which can be saved or used with the [Vision API](/docs/apiref/vision-api/).
 
 ```javascript
 var image = browser.takeScreenshot();
