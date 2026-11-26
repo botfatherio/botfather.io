@@ -60,7 +60,7 @@ You can also create an initially invalid `Color` object by providing neither a c
 
 ---
 
-### `Color.isNull();`
+### `Color.isValid();`
 
 Returns true if the color is valid; otherwise returns false.
 

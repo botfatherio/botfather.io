@@ -315,5 +315,5 @@ If you encounter issues with mouse input not working on Linux, try adding a dela
 
 ```javascript
 Helper.sleep(5); // Give the userspace some time to detect the fake hardware device
-Desktop.moveMouse(new Point(100, 100));
+Desktop.warpCursor(new Point(100, 100));
 ```

@@ -128,7 +128,10 @@ browser.releaseRight(a_point);
 var location = new Point(200, 200);
 var pixels_horizontally = 0;
 var pixels_vertically = 50;
-browser.scrollWheel(location, pixels_horizontally, pixels_vertically);
+browser.scrollWheel(
+  location,
+  new Point(pixels_horizontally, pixels_vertically),
+);
 ```
 
 ## Press keyboard keys and enter text
