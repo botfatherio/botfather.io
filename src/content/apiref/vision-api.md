@@ -2,7 +2,7 @@
 title: Vision API
 ---
 
-The Vision APIs main purpose is to process images taken using the [Android API](../android-api), [Browser API](../browser-api) or [Desktop API](../desktop-api). But there is no restriction on that, any [Image](../image) can be processed by the Vision APIs methods.
+The Vision APIs main purpose is to process images taken using the [Android API](../android-api), [Browser API](../browser) or [Desktop API](../desktop-api). But there is no restriction on that, any [Image](../image) can be processed by the Vision APIs methods.
 
 Currently the Vision API provides methods to find subimages or blobs on images. Results of such methods are single [Match](../match) objects or arrays containing multiple [Match](../match) objects. Things you might want to search for are for instance _buttons on webpages_ or _loot in games_. To find non static, maybe spinning objects, one can use the more complex `.findBlobs` method.
 

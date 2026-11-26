@@ -8,7 +8,7 @@ Saw that small code snipped on our startpage? In this tutorial we'll program som
 
 While winning a game is difficult, **writing a simple bot for educational purposes** is simple.
 
-In this tutorial we will use Botfather's [Browser API](../apiref/browser-api), [Vision API](../apiref/vision-api) and [Helper API](../apiref/helper-api).
+In this tutorial we will use Botfather's [Browser API](../apiref/browser), [Vision API](../apiref/vision-api) and [Helper API](../apiref/helper-api).
 
 ## Step 1: Loading the game
 
@@ -32,7 +32,7 @@ Browser.loadUrl("http://agar.io/");
 Browser.finishLoading(); // Wait for the website to finish loading.
 ```
 
-By default the `Browser.finishLoading` methodreturns `false` after 30 seconds, if the website takes longer to load. Read the [Browser API documentation](../apiref/browser-api) to learn more.
+By default the `Browser.finishLoading` methodreturns `false` after 30 seconds, if the website takes longer to load. Read the [Browser API documentation](../apiref/browser) to learn more.
 
 ## Step 2: Start the game
 

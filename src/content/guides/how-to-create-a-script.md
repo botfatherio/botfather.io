@@ -16,7 +16,7 @@ Once you have folder for your script open your code editor and create a new file
 
 ## Pick an API
 
-It's time to pick one of these APIs to start with: [Android API](/docs/apiref/android-api/), [Browser API](/docs/apiref/browser-api/), [Desktop API](/docs/apiref/desktop-api/).
+It's time to pick one of these APIs to start with: [Android API](/docs/apiref/android-api/), [Browser API](/docs/apiref/browser/), [Desktop API](/docs/apiref/desktop-api/).
 
 Which API to choose obviously depends on what you want to automated. We recomment to use the Browser API if you just want to mess around. By the way: You can pick multiple APIs if you want to. The work at the same time.
 
@@ -24,7 +24,7 @@ Which API to choose obviously depends on what you want to automated. We recommen
 
 Now it's time to look through the APIs documentation, thats how real programmers find what they need. Feel free to contact us if there is a function or API you need and we'll consider implementing it.
 
-Take a look at what can be control using the API you choosed. Using the [Browser API](/docs/apiref/browser-api/) you could for example load a youtube video and then pause and resume it.
+Take a look at what can be control using the API you choosed. Using the [Browser API](/docs/apiref/browser/) you could for example load a youtube video and then pause and resume it.
 
 ## Vision is key
 
