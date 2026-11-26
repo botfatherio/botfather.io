@@ -4,8 +4,6 @@ title: Color Type
 
 To represent colors, the Botfather script engine provides a `Color` type. Some Botfather APIs take instances of `Color` as parameters. Feel free to use and extend the `Color` type yourself in your bot scripts.
 
-## Table of contents
-
 ## RGB color instantiation
 
 The most common way to represent colors is by _using their RGB (red, green, blue) values_. Each RGB value ranges from 0 to 255. Red, for example, can be represented like this: `var red = new Color(255, 0, 0);`

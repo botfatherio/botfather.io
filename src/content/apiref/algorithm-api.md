@@ -4,8 +4,6 @@ title: Algorithm API
 
 Botfather's Algorithm API is a collection of algorithms we think are useful for script creators.
 
-## Table of contents
-
 ## Examples
 
 ---

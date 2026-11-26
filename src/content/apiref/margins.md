@@ -4,8 +4,6 @@ title: Margins Type
 
 The Botfather engine provides a built-in `Margins` type. Use it to represent margins in a convenient way.
 
-## Table of contents
-
 ## Margins type instantiation
 
 ---

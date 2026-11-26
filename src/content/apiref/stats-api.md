@@ -4,8 +4,6 @@ title: Stats API
 
 The Stats API allows scripts to display grouped and labeled string values in a bot's `Stats` tab. This is especially useful for displaying progress-related information.
 
-## Table of contents
-
 ## Examples
 
 ---

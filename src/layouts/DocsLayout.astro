@@ -1,0 +1,35 @@
+---
+import type { MarkdownHeading } from "astro";
+import Layout from "@layouts/Layout.astro";
+import TableOfContents from "@components/TableOfContents.astro";
+
+interface Props {
+  title: string;
+  headings: MarkdownHeading[];
+}
+
+const { title } = Astro.props;
+const headings = Astro.props.headings.filter(
+  (heading) => heading.depth === 2 || heading.depth === 3,
+);
+const hasToc = headings.length > 0;
+---
+
+<Layout title={title} divider>
+  <div class="container py-5">
+    <article class:list={["docs-main", { "docs-main-with-toc": hasToc }]}>
+      <div class="docs-intro">
+        <h1>{title}</h1>
+      </div>
+      {hasToc && <TableOfContents headings={headings} />}
+      <div
+        class="docs-content markdown"
+        data-bs-spy={hasToc ? "scroll" : undefined}
+        data-bs-target={hasToc ? "#TableOfContents" : undefined}
+        data-bs-root-margin={hasToc ? "0px 0px -40%" : undefined}
+      >
+        <slot />
+      </div>
+    </article>
+  </div>
+</Layout>

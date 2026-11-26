@@ -4,8 +4,6 @@ title: Point Type
 
 Botfather's script engine provides a built-in `Point` type. Use it to represent points in your bot scripts. Some Botfather API methods even require you to pass `Point` objects as parameters.
 
-## Table of contents
-
 ## Point type instantiation
 
 New `Point` objects can be created by providing either the point's _x_ and _y_ values or nothing, which results in a point with _x_, _y_ coordinates of 0.

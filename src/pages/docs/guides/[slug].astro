@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import type { GetStaticPaths } from "astro";
-import Layout from "@layouts/Layout.astro";
+import DocsLayout from "@layouts/DocsLayout.astro";
 
 export const getStaticPaths = (async () => {
   const guides = await getCollection("guides");
@@ -13,12 +13,9 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { guide } = Astro.props;
-const { Content } = await render(guide);
+const { Content, headings } = await render(guide);
 ---
 
-<Layout title={guide.data.title} divider>
-  <article class="container py-5 markdown">
-    <h1>{guide.data.title}</h1>
-    <Content />
-  </article>
-</Layout>
+<DocsLayout title={guide.data.title} headings={headings}>
+  <Content />
+</DocsLayout>

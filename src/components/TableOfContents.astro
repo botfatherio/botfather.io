@@ -1,0 +1,62 @@
+---
+import type { MarkdownHeading } from "astro";
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+interface TocItem {
+  heading: MarkdownHeading;
+  children: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+
+// Nest h3 headings below their preceding h2
+const items: TocItem[] = [];
+for (const heading of headings) {
+  if (heading.depth === 2 || items.length === 0) {
+    items.push({ heading, children: [] });
+  } else if (heading.depth === 3) {
+    items[items.length - 1].children.push(heading);
+  }
+}
+---
+
+<div class="docs-toc mt-2 mb-4 my-lg-0 mb-lg-5 text-body-secondary">
+  <button
+    class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none docs-toc-toggle d-md-none"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#tocContents"
+    aria-expanded="false"
+    aria-controls="tocContents"
+  >
+    On this page
+    <i class="bi bi-chevron-expand d-md-none ms-2" aria-hidden="true"></i>
+  </button>
+  <strong class="d-none d-md-block h6 my-2 ms-3">On this page</strong>
+  <hr class="d-none d-md-block my-2 ms-3" />
+  <div class="collapse docs-toc-collapse" id="tocContents">
+    <nav id="TableOfContents">
+      <ul>
+        {
+          items.map(({ heading, children }) => (
+            <li>
+              <a href={`#${heading.slug}`}>{heading.text}</a>
+              {children.length > 0 && (
+                <ul>
+                  {children.map((child) => (
+                    <li>
+                      <a href={`#${child.slug}`}>{child.text}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</div>

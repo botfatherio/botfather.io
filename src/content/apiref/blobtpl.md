@@ -6,8 +6,6 @@ The BlobTpl is used to describe the shape and size of blobs. Such blobs can then
 
 If you want to look for blobs of a certain color, isolate that color in your [Image](/docs/apiref/image/) beforehand. To do so, use the [Image](/docs/apiref/image/) type's `.isolateColorRange` method. After doing so, only blobs of the desired color are left.
 
-## Table of Contents
-
 ## Creating a BlobTpl
 
 The BlobTpl's constructor takes up to 11 numeric arguments in the following order. Grouped arguments must be provided at the same time.

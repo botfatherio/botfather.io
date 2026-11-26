@@ -4,8 +4,6 @@ title: Rect Type
 
 In bot scripts, rectangles (rects for short) can be represented using Botfather's built-in `Rect` object. A `Rect` is described by its top left corner and size. The `Rect` type provides methods to work with rectangles conveniently.
 
-## Table of contents
-
 ## Creating Rect objects
 
 A non-empty `Rect` object can be created by providing the `Rect`'s _top left corner and size_ or its _top left and bottom right corners_. The corner position must be represented using the [Point type](/docs/apiref/point/) and sizes using the [Size type](/docs/apiref/size/). Providing no parameters results in an empty rectangle being created.

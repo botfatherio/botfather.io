@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import type { GetStaticPaths } from "astro";
-import Layout from "@layouts/Layout.astro";
+import DocsLayout from "@layouts/DocsLayout.astro";
 
 export const getStaticPaths = (async () => {
   const docs = await getCollection("apiref");
@@ -13,12 +13,9 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { doc } = Astro.props;
-const { Content } = await render(doc);
+const { Content, headings } = await render(doc);
 ---
 
-<Layout title={doc.data.title} divider>
-  <article class="container py-5 markdown">
-    <h1>{doc.data.title}</h1>
-    <Content />
-  </article>
-</Layout>
+<DocsLayout title={doc.data.title} headings={headings}>
+  <Content />
+</DocsLayout>

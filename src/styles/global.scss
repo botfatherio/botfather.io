@@ -121,3 +121,125 @@ $accordion-button-active-bg: var(--#{$prefix}accordion-bg);
   @extend .rounded;
   @extend .p-3;
 }
+
+.docs-main {
+  display: grid;
+  grid-template-areas:
+    "intro"
+    "toc"
+    "content";
+  grid-template-rows: auto auto 1fr;
+
+  > * {
+    min-width: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &.docs-main-with-toc {
+      grid-template-areas:
+        "intro toc"
+        "content toc";
+      grid-template-rows: auto 1fr;
+      grid-template-columns: 4fr 1fr;
+      column-gap: $grid-gutter-width;
+    }
+  }
+}
+
+.docs-intro {
+  grid-area: intro;
+}
+
+.docs-content {
+  grid-area: content;
+}
+
+.docs-toc {
+  grid-area: toc;
+
+  @include media-breakpoint-up(lg) {
+    position: sticky;
+    top: 2rem;
+    right: 0;
+    z-index: 2;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+  }
+
+  nav {
+    @include font-size(0.875rem);
+
+    ul {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+
+      ul {
+        padding-left: 1rem;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 0.125rem 0 0.125rem 0.75rem;
+      color: inherit;
+      text-decoration: none;
+      border-left: 0.125rem solid transparent;
+
+      &:hover,
+      &.active {
+        color: var(--#{$prefix}primary);
+        border-left-color: var(--#{$prefix}primary);
+      }
+
+      &.active {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.docs-toc-toggle {
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    color: var(--#{$prefix}body-color);
+    border: 1px solid var(--#{$prefix}border-color);
+    @include border-radius(var(--#{$prefix}border-radius));
+
+    &:hover,
+    &:focus,
+    &:active,
+    &[aria-expanded="true"] {
+      color: var(--#{$prefix}primary);
+      background-color: var(--#{$prefix}body-bg);
+      border-color: var(--#{$prefix}primary);
+    }
+
+    &:focus,
+    &[aria-expanded="true"] {
+      box-shadow: 0 0 0 3px rgba(var(--#{$prefix}primary-rgb), 0.25);
+    }
+  }
+}
+
+.docs-toc-collapse {
+  @include media-breakpoint-down(md) {
+    nav {
+      padding: 1.25rem 1.25rem 1.25rem 1rem;
+      background-color: var(--#{$prefix}tertiary-bg);
+      border: 1px solid var(--#{$prefix}border-color);
+      @include border-radius(var(--#{$prefix}border-radius));
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block !important; // stylelint-disable-line declaration-no-important
+  }
+}

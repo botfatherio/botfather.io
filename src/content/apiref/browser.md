@@ -6,8 +6,6 @@ Botfather features an embedded Chromium-based web browser that can be automated.
 
 Botfather browsers can be used to automate many things such as loading websites, executing JavaScript, and sending click, scroll, and keyboard events. Furthermore, browsers can take screenshots, which can then be saved or analyzed using the [Vision API](/docs/apiref/vision-api/).
 
-## Table of contents
-
 ## Create browsers and load websites
 
 ```javascript

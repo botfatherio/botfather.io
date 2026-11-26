@@ -2,8 +2,6 @@
 title: Helper API
 ---
 
-## Table of contents
-
 ## Helper API methods
 
 ---

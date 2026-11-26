@@ -4,8 +4,6 @@ title: Image Type
 
 Whenever you want to work with images in bot scripts, you need the built-in `Image` type. Using the `Image` type, images can be loaded into the script engine, manipulated, and used in methods.
 
-## Table of contents
-
 ## Loading an image
 
 Usually, you want to load an image from an image file provided with your script file. Images can be stored in any common format, but we strongly recommend using **.png** files (a lossless image file format).

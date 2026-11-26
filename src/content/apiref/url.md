@@ -5,8 +5,6 @@ title: URL Type
 Botfather has a built-in `Url` type that can be used to represent URLs like _test.example.com/path/&query#fragment_. The `Url` type provides methods to retrieve and modify individual parts of the URL.
 Representing URLs as strings is fine, but if you want to access individual parts of more complex URLs, using the Url type is recommended.
 
-## Table of contents
-
 ## Url terminology
 
 Complex URLs consist of different parts, each with its own name. To use the Url type's methods, you need to know what the parts are called. Consider these two example URLs:

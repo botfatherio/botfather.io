@@ -1,6 +1,4 @@
 import { defineConfig } from "astro/config";
-import { unified } from "@astrojs/markdown-remark";
-import remarkToc from "remark-toc";
 import sitemap from "@astrojs/sitemap";
 import fs from "fs/promises";
 
@@ -10,11 +8,6 @@ export default defineConfig({
   // Astro 7 defaults to "jsx", which drops meaningful spaces between inline elements.
   compressHTML: true,
   markdown: {
-    processor: unified({
-      remarkPlugins: [
-        [remarkToc, { heading: "Table of contents", maxDepth: 3 }],
-      ],
-    }),
     shikiConfig: {
       theme: "github-light",
     },

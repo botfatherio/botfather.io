@@ -8,8 +8,6 @@ Currently, the Vision API provides methods to find subimages or blobs in images.
 
 Mostly for debugging purposes, the Vision API provides the `.markMatch` and `.markMatches` methods. Those methods can be used to mark matches on a given image visually. That way you can check whether you chose good parameters to find what you were looking for.
 
-## Table of contents
-
 ## Access Vision API methods
 
 Every bot script has its own global Vision API object. That object holds all Vision API methods and can be used to access them.

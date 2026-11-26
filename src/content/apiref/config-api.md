@@ -6,8 +6,6 @@ The Config API lets script users set up a bot from the GUI, so they don't have t
 
 ![Botfather Config tab example](@assets/blog/bf5_config_tab.png)
 
-## Table of contents
-
 ## Examples
 
 ---

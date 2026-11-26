@@ -4,8 +4,6 @@ title: Timer Type
 
 The Timer type provides an interface for creating timers. Warning: The Timer type API has not been finalized yet and is subject to change.
 
-## Table of contents
-
 ## Timer usage
 
 The Timer type's constructor takes no arguments.

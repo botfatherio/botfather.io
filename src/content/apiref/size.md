@@ -4,8 +4,6 @@ title: Size Type
 
 Botfather has a built-in `Size` type, which can be used to represent the sizes of anything two-dimensional. Furthermore, some Botfather API methods require you to pass `Size` objects as parameters.
 
-## Table of contents
-
 ## Size type instantiation
 
 Size objects can be created by providing either their _width_ and _height_ or _nothing_, which results in an _empty_ `Size` object.
