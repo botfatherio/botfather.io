@@ -18,6 +18,7 @@ Config options are defined in the bot's `manifest.json` file. The manifest file 
 
 ```json
 {
+  "$schema": "https://botfather.io/schemas/manifest.schema.json",
   "manifest_version": 1,
   "script": "demo.js",
   "config": {
@@ -87,6 +88,10 @@ if (rounds === undefined) {
 ## The manifest file
 
 ---
+
+### `$schema`
+
+Optional. The URL of the Botfather bot manifest JSON schema, `https://botfather.io/schemas/manifest.schema.json`. Specifying the schema enables modern code editors like VS Code to provide autocomplete and validation.
 
 ### `manifest_version`
 
