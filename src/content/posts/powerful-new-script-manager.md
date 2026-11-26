@@ -1,7 +1,7 @@
 ---
 pubDate: 2024-10-29
 title: Powerful New Script Manager (version 6.8)
-lead: Botfather 6.8 features a new powerful script manager and removes the need for an account to run bots longer than two hours.
+lead: Botfather 6.8 features a powerful new script manager and removes the need for an account to run bots longer than two hours.
 ---
 
 ## New Script Manager
@@ -12,7 +12,7 @@ This enables developers to host alternative versions of their scripts via differ
 As before, Botfather can still automatically update scripts cloned from Git repositories.
 
 This change made the script manager more powerful and flexible.
-It also relieved us from having to worry about malicious scripts being listed on promoted on our website.
+It also relieved us from having to worry about malicious scripts being listed or promoted on our website.
 
 ## Accounts are gone
 
@@ -20,7 +20,7 @@ Similar to how we disconnected the new script manager from our website, we also 
 This was done to enable Botfather to be used offline and in preparation for making Botfather open-source.
 Note that all existing accounts and all their data have been deleted.
 
-## New Website
+## New website
 
 Disconnecting the script manager from the website and removing the account requirement also enabled us to simplify our website.
 It's open-source and powered by Astro, simplifying hosting and enabling contributions from the community.

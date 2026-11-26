@@ -34,7 +34,7 @@ We would like to expressly point out that the transmission of data via the Inter
 
 The use by third parties of all published contact details for the purpose of advertising is expressly excluded. We reserve the right to take legal steps in the case of the unsolicited sending of advertising information; e.g., by means of spam mail.
 
-For more information read our [Privacy Policy](https://botfather.io/docs/legal/privacy/)
+For more information, read our [Privacy Policy](/privacy/).
 
 Based on: [Mustervorlage.net](http://www.mustervorlage.net/disclaimer-muster#Disclaimer)
 
@@ -89,7 +89,7 @@ If any provision of this Agreement is held to be unenforceable or invalid, such 
 
 ### Amendments to this Agreement
 
-The Botfather developer(s) reserve the right, at its sole discretion, to modify or replace this Agreement at any time. If a revision is material we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+The Botfather developer(s) reserve the right, at its sole discretion, to modify or replace this Agreement at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
 
 ### Contact Information
 

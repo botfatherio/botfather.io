@@ -2,7 +2,7 @@
 title: Android API
 ---
 
-Using Botfather's Android API any Android device connected to your PC can be automated. Also most Android emulators can be connected to Botfathe'r and automated. To do so Botfather makes use of the [Android Debug Bridge](https://developer.android.com/studio/command-line/adb) (Adb for short). To use Botfather's Android API one has to have Adb installed and eventually the Android **developer options** enabled on the connected Android device.
+Using Botfather's Android API, any Android device connected to your PC can be automated. Most Android emulators can also be connected to Botfather and automated. To do so, Botfather makes use of the [Android Debug Bridge](https://developer.android.com/studio/command-line/adb) (ADB for short). To use Botfather's Android API, one has to have ADB installed and possibly the Android **developer options** enabled on the connected Android device.
 
 ## Table of contents
 
@@ -12,7 +12,7 @@ Using Botfather's Android API any Android device connected to your PC can be aut
 
 ### `Android.connected();`
 
-Returns true if the Android device or emulator selected by the user is still connected to Adb server used by Botfather.
+Returns true if the Android device or emulator selected by the user is still connected to the ADB server used by Botfather.
 
 ### `Android.listPackages();`
 
@@ -22,13 +22,13 @@ Returns an array of strings containing all packages (including apps) installed o
 
 - `package` (string): The package name of the app to start.
 
-Starts the app identified by it's package name. This method returns true if starting the app succeeded; returns false otherwise. Use the `.listPackages` method to check whether an app is installed on the users device.
+Starts the app identified by its package name. This method returns true if starting the app succeeded; returns false otherwise. Use the `.listPackages` method to check whether an app is installed on the user's device.
 
 ### `Android.sendTap(location);`
 
-- `location` ([Point](/docs/apiref/point/)): where to tap.
+- `location` ([Point](/docs/apiref/point/)): Where to tap.
 
-Sends an tap event to the specified `location` coordinates on the android devices screen. Returns true if sending the tap succeeded; returns false otherwise.
+Sends a tap event to the specified `location` coordinates on the Android device's screen. Returns true if sending the tap succeeded; returns false otherwise.
 
 ### `Android.sendSwipe(start, end, duration_in_ms);`
 
@@ -40,26 +40,26 @@ Sends a swipe event from the `start` location to the `end` location. `duration_i
 
 ### `Android.sendKeyEvent(key_event_code);`
 
-- `key_event_code` (string): The key event code to be send.
+- `key_event_code` (string): The key event code to be sent.
 
-Sends the specified [KeyEvent](https://developer.android.com/reference/android/view/KeyEvent.html) to the android device.
+Sends the specified [KeyEvent](https://developer.android.com/reference/android/view/KeyEvent.html) to the Android device.
 
-Returns on success, false otherwise.
+Returns true on success; false otherwise.
 
 ### `Android.sendTextInput(text);`
 
-Sends the specified `text` in a text input event to the connected android device.
+Sends the specified `text` in a text input event to the connected Android device.
 
-Returns on success, false otherwise.
+Returns true on success; false otherwise.
 
 ### `Android.takeScreenshot();`
 
-Creates and returns an screenshot [Image](/docs/apiref/image/) object.
+Creates and returns a screenshot [Image](/docs/apiref/image/) object.
 
 ### `Android.getSize();`
 
-Returns the Android devices screen size as a [Size](/docs/apiref/size/) object.
+Returns the Android device's screen size as a [Size](/docs/apiref/size/) object.
 
 ### `Android.getRect();`
 
-Returns the Android devices screen size as a [Rect](/docs/apiref/rect/) object.
+Returns the Android device's screen rect as a [Rect](/docs/apiref/rect/) object.

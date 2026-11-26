@@ -2,96 +2,96 @@
 title: Simple agar.io Bot Tutorial
 ---
 
-Saw that small code snipped on our startpage? In this tutorial we'll program something quite similar: A super basic agar.io bot script.
+Saw that small code snippet on our start page? In this tutorial, we'll program something quite similar: a super basic agar.io bot script.
 
-[agar.io](http://agar.io/) is an online browsergame were you start as a small blob and become bigger by "eathing" other blobs. Once big enough you can even start "eating" other players.
+[agar.io](http://agar.io/) is an online browser game where you start as a small blob and become bigger by "eating" other blobs. Once big enough, you can even start "eating" other players.
 
 While winning a game is difficult, **writing a simple bot for educational purposes** is simple.
 
-In this tutorial we will use Botfather's [Browser API](/docs/apiref/browser/), [Vision API](/docs/apiref/vision-api/) and [Helper API](/docs/apiref/helper-api/).
+In this tutorial, we will use Botfather's [Browser API](/docs/apiref/browser/), [Vision API](/docs/apiref/vision-api/), and [Helper API](/docs/apiref/helper-api/).
 
 ## Step 1: Loading the game
 
-The first thing our bot shall do is loading the games website `http://agar.io/`. To do so we use the `Browser.loadUrl` method. This method is asynchronous, which means that it does not wait for the website to finish loading.
+The first thing our bot shall do is load the game's website `http://agar.io/`. To do so, we use the `Browser.loadUrl` method. This method is asynchronous, which means that it does not wait for the website to finish loading.
 
 ```javascript
 Browser.loadUrl("http://agar.io/");
 ```
 
-But we want the bot to wait for the website to finish loading. We could use a method such as `Helper.sleep` to wait for some seconds. But depending on the users internet connection we might be waiting too long or not long enough.
+But we want the bot to wait for the website to finish loading. We could use a method such as `Helper.sleep` to wait for some seconds. But depending on the user's internet connection, we might be waiting too long or not long enough.
 
 ```javascript
 Browser.loadUrl("http://agar.io/");
 Helper.sleep(10); // Wait for 10 seconds. This might be too long or not long enough for the website to load.
 ```
 
-Instead we use the `Browser.finishLoading` method to make the Browser wait for the website to finish loading. Doing so the script will continue once the website finished loading.
+Instead, we use the `Browser.finishLoading` method to make the browser wait for the website to finish loading. That way, the script will continue once the website has finished loading.
 
 ```javascript
 Browser.loadUrl("http://agar.io/");
 Browser.finishLoading(); // Wait for the website to finish loading.
 ```
 
-By default the `Browser.finishLoading` methodreturns `false` after 30 seconds, if the website takes longer to load. Read the [Browser API documentation](/docs/apiref/browser/) to learn more.
+By default, the `Browser.finishLoading` method returns `false` after 30 seconds if the website takes longer to load. Read the [Browser API documentation](/docs/apiref/browser/) to learn more.
 
 ## Step 2: Start the game
 
-After loading the games website, we're presented with the games start screen. Here we have to click the play button and optionaly enter a username.
+After loading the game's website, we're presented with the game's start screen. Here we have to click the play button and optionally enter a username.
 
 ![Agar.io start screen](@assets/docs/start-screen.png)
 
-There are two methods to solve this "problem". We could either take a screenshot, find the play button and click at it's location or execute some javascript in the browser to submit the login form.
+There are two methods to solve this "problem". We could either take a screenshot, find the play button, and click at its location, or execute some JavaScript in the browser to submit the login form.
 
-While executing javascript is the faster and more robust way, it's not always possible. Executing javascript does only work on websites, neither on Android nor on the Desktop. Taking screenshots, finding subimages (templates) on it and clicking them always works.
+While executing JavaScript is the faster and more robust way, it's not always possible. Executing JavaScript only works on websites, neither on Android nor on the desktop. Taking screenshots, finding subimages (templates) in them, and clicking them always works.
 
-### Using browser javascript
+### Using browser JavaScript
 
-As shown on Botfather's startpage we just have to find the HTML play button and click it using javascript. If you known HTML (Hypertext Markup Language) this is straight forward for you: Just write a little javascript code snipped and execute it using the `Browser.executeJavascript` method.
+As shown on Botfather's start page, we just have to find the HTML play button and click it using JavaScript. If you know HTML (Hypertext Markup Language), this is straightforward for you: Just write a little JavaScript code snippet and execute it using the `Browser.executeJavascript` method.
 
-For newcomers this might be confusing: We're writing bot scripts in javascript and sending a javascript to the browser to execute it there (dafuq?). If you don't know HTML you might want to ignore this section, but look at the _Using image recognition_ instead.
+For newcomers, this might be confusing: We're writing bot scripts in JavaScript and sending JavaScript to the browser to execute it there (dafuq?). If you don't know HTML, you might want to skip this section and look at _Using image recognition_ instead.
 
-The play button elements id it `play`. Using `document.getElementById` we can get a reference to the element and call its `.click` method to click it.
+The play button element's ID is `play`. Using `document.getElementById`, we can get a reference to the element and call its `.click` method to click it.
 
 ```javascript
 var click_script = "document.getElementById('play').click();";
-Browser.executeJavscript(click_script);
+Browser.executeJavascript(click_script);
 ```
 
 ### Using image recognition
 
-Mastering image recognition is what you want to create good bots. We'll employ a method called _template matching_. To do so we need a screenshot of the browser and an smaller image, called _template_, we want to find in the screenshot.
+Mastering image recognition is what you want in order to create good bots. We'll employ a method called _template matching_. To do so, we need a screenshot of the browser and a smaller image, called a _template_, that we want to find in the screenshot.
 
 To get good results, called _matches_, you want your _template_ to look as distinct as possible. The _template_ must look the same as in the screenshot. Looking for a scaled version of it won't work.
 
-To take a screenshot of the browser we use the `Browser.takeScreenshot` method. It will return an [Image](/docs/apiref/image/) object. We store the screenshot in a variable called `screenshot`.
+To take a screenshot of the browser, we use the `Browser.takeScreenshot` method. It will return an [Image](/docs/apiref/image/) object. We store the screenshot in a variable called `screenshot`.
 
 ```javascript
 var screenshot = Browser.takeScreenshot();
 ```
 
-On the screenshot we'll look for a _template_ of the play button shown below. Download and put it next to your script file.
+In the screenshot, we'll look for the _template_ of the play button shown below. Download it and put it next to your script file.
 
-![Agar.io start screen](@assets/docs/play-button.png)
+![Agar.io play button](@assets/docs/play-button.png)
 
-To load the play buttons _template_ image we use the [Image](/docs/apiref/image/) constructor method. We store the loaded _template_ [Image](/docs/apiref/image/) object in a variable called `template`.
+To load the play button's _template_ image, we use the [Image](/docs/apiref/image/) constructor. We store the loaded _template_ [Image](/docs/apiref/image/) object in a variable called `template`.
 
 ```javascript
 var template = new Image("play-button.png");
 ```
 
-It's time to use one a [Vision API](/docs/apiref/vision-api/) method. `Vision.findMatch` takes three parameters: A `screenshot`, a `template` and a `score` a returns a [Match](/docs/apiref/match/) object.
+It's time to use one of the [Vision API](/docs/apiref/vision-api/) methods. `Vision.findMatch` takes three parameters: a `screenshot`, a `template`, and a `score`, and returns a [Match](/docs/apiref/match/) object.
 
-The `match` object will tell us where the _template_ has been found on the _screenshot_. If there are multiple matches, the best one is returned.
+The `match` object will tell us where the _template_ has been found in the _screenshot_. If there are multiple matches, the best one is returned.
 
-The _score_ tells the `Vision.findMatch` method how good at _match_ must atleast be. A _score_ of `0.5` means: the _template_ must match something in the _screenshot_ atleast 50%. We want the _template_ to match atleast to 95%.
+The _score_ tells the `Vision.findMatch` method how good a _match_ must be at least. A _score_ of `0.5` means: the _template_ must match something in the _screenshot_ by at least 50%. We want the _template_ to match by at least 95%.
 
 ```javascript
 var match = Vision.findMatch(screenshot, template, 0.95);
 ```
 
-Using the `Match.isValid` method we can check whether the play button could be found.
+Using the `Match.isValid` method, we can check whether the play button could be found.
 
-To click the play button we use the `Browser.leftClick` method which takes a [Point](/docs/apiref/point/) object. We want to click the play button matches center. To do so we use two methods: `Match.getRect` and `Rect.getCenter()`. Read the [Rect](/docs/apiref/point/) objects documentation to learn more.
+To click the play button, we use the `Browser.leftClick` method, which takes a [Point](/docs/apiref/point/) object. We want to click the center of the play button match. To do so, we use two methods: `Match.getRect` and `Rect.getCenter()`. Read the [Rect](/docs/apiref/rect/) object's documentation to learn more.
 
 ```javascript
 // Complete code using image recognition:

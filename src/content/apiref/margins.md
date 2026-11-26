@@ -2,15 +2,15 @@
 title: Margins Type
 ---
 
-The Botfather engine provides an inbuild `Margins` type. Use it to represents margins in a convenient way.
+The Botfather engine provides a built-in `Margins` type. Use it to represent margins in a convenient way.
 
 ## Table of contents
 
-## Margins type instanciation
+## Margins type instantiation
 
 ---
 
-New `Margins` objects can be created providing the _left_, _right_, _top_ and _bottom_ margin values (**in that order**) or nothing. Providing nothing results in an _null_ margins object with all margins values being 0.
+New `Margins` objects can be created by providing the _left_, _right_, _top_, and _bottom_ margin values (**in that order**) or nothing. Providing nothing results in a _null_ margins object with all margin values being 0.
 
 - `var margins = new Margins(10, 42, 21, 100);`
 - `var null_margins = new Margins();`
@@ -21,7 +21,7 @@ New `Margins` objects can be created providing the _left_, _right_, _top_ and _b
 
 ### `Margins.isNull();`
 
-Returns true if all margins are is 0; otherwise returns false.
+Returns true if all margins are 0; otherwise returns false.
 
 ### `Margins.getTop();`
 
@@ -31,7 +31,7 @@ Returns the top margin.
 
 - `top` (number): The new top margin.
 
-Sets the Top margin to `top`.
+Sets the top margin to `top`.
 
 ### `Margins.getLeft();`
 
@@ -65,12 +65,12 @@ Sets the bottom margin to `bottom`.
 
 ### `Margins.marginsAdded(other_margins)`
 
-- `margins` ([Margins](/docs/apiref/margins/)): The other margins
+- `other_margins` ([Margins](/docs/apiref/margins/)): The other margins.
 
 Returns a [Margins](/docs/apiref/margins/) object that is the sum of other_margins and this margins object; each component is added separately.
 
 ### `Margins.marginsSubtracted(other_margins)`
 
-- `margins` ([Margins](/docs/apiref/margins/)): The other margins
+- `other_margins` ([Margins](/docs/apiref/margins/)): The other margins.
 
 Returns a [Margins](/docs/apiref/margins/) object that is formed by subtracting other_margins from this margins object; each component is subtracted separately.

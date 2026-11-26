@@ -2,7 +2,7 @@
 title: Algorithm API
 ---
 
-Botfathers Algorithm API is a collection of algorithms we thing are usefull for script creator.
+Botfather's Algorithm API is a collection of algorithms we think are useful for script creators.
 
 ## Table of contents
 
@@ -16,13 +16,13 @@ Botfathers Algorithm API is a collection of algorithms we thing are usefull for 
 - `start_node` (string): Name of the start node
 - `dest_node` (string): Name of the destination node
 
-This method uses the [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) to find the shortest path from a `start_node` to a `dest_node` in a `graph`.
+This method uses [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) to find the shortest path from a `start_node` to a `dest_node` in a `graph`.
 
-Such graph could be anything, for instance the map in an online game or the sitemap of an webpage.
+Such a graph could be anything, for instance, the map in an online game or the sitemap of a website.
 
-### Graph Example:
+### Graph example
 
-**Note:** Each edges destination node must exist as a node. If a node does not exist, the method doesn't report it (yet).
+**Note:** Each edge's destination node must exist as a node. If a node does not exist, the method doesn't report it (yet).
 
 ```javascript
 var graph = {
@@ -67,4 +67,4 @@ var graph = {
 Algorithm.dijkstra(graph, "north_adams", "worcester");
 ```
 
-In this example `.dijkstra` will return this array: `["north_adams", "greenfield", "worcester"]`.
+In this example, `.dijkstra` will return this array: `["north_adams", "greenfield", "worcester"]`.

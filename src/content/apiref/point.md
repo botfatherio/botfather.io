@@ -2,13 +2,13 @@
 title: Point Type
 ---
 
-Botfather's script engine provides an inbuild `Point` type. Use it to represents points in your bot scripts. Some Botfather Api methods even require you to pass parameters being `Point` objects to them.
+Botfather's script engine provides a built-in `Point` type. Use it to represent points in your bot scripts. Some Botfather API methods even require you to pass `Point` objects as parameters.
 
 ## Table of contents
 
-## Point type instanciation
+## Point type instantiation
 
-New `Point` objects can be created proving either the points _x_ and _y_ values or nothing, which results in an point with _x_, _y_ coordiantes of 0.
+New `Point` objects can be created by providing either the point's _x_ and _y_ values or nothing, which results in a point with _x_, _y_ coordinates of 0.
 
 - `var null_point = new Point();`
 - `var point = new Point(42, 128);`
@@ -19,33 +19,33 @@ New `Point` objects can be created proving either the points _x_ and _y_ values 
 
 ### `Point.getX();`
 
-Returns the points x value.
+Returns the point's x value.
 
 ### `Point.setX(x);`
 
-- `x` (number): The points new x value.
+- `x` (number): The point's new x value.
 
-Sets the points x value to `x`.
+Sets the point's x value to `x`.
 
 ### `Point.getY();`
 
-Returns the points y value.
+Returns the point's y value.
 
 ### `Point.setY(y);`
 
-- `y` (number): The points new y value.
+- `y` (number): The point's new y value.
 
-Sets the points y value to `y`.
+Sets the point's y value to `y`.
 
 ### `Point.pointAdded(other_point);`
 
-- `other_point` ([Point](/docs/apiref/point/)): The point to be added
+- `other_point` ([Point](/docs/apiref/point/)): The point to be added.
 
 Returns a [Point](/docs/apiref/point/) object that is the sum of this point and other_point; each component is added separately.
 
 ### `Point.pointSubtracted(other_point);`
 
-- `other_point` ([Point](/docs/apiref/point/)): The point to be substracted
+- `other_point` ([Point](/docs/apiref/point/)): The point to be subtracted.
 
 Returns a [Point](/docs/apiref/point/) object that is formed by subtracting other_point from this point; each component is subtracted separately.
 

@@ -2,7 +2,7 @@
 title: Stats API
 ---
 
-The stats API allows scripts to display grouped and labeled string values in a bots `Stats` tab. This is especially usefull for displaying progress related information.
+The Stats API allows scripts to display grouped and labeled string values in a bot's `Stats` tab. This is especially useful for displaying progress-related information.
 
 ## Table of contents
 
@@ -21,7 +21,7 @@ Stats.show("General", "Progress", "10%");
 
 ### Update a value
 
-A value can be referenced by the its `group` and `label` name.
+A value can be referenced by its `group` and `label` names.
 
 ```javascript
 var group = "Sleep";
@@ -46,7 +46,7 @@ Stats.show("Group2", "Label3", "Value3");
 
 ### Clear stats
 
-When a bot script is restarted its stats tab is cleared. The stats tab can also be cleared from the script itself.
+When a bot script is restarted, its stats tab is cleared. The stats tab can also be cleared from the script itself.
 
 ```javascript
 Stats.show("Group", "Label", "Value");

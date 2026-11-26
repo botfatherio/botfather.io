@@ -2,9 +2,9 @@
 title: Browser Type
 ---
 
-Botfather features an embedded Chromium based webbrowser that can be automated. Starting with Botfather version 6, multiple browsers can be automated simultaneously. Browsers run "headless" in the background by default. However, they can be inspected und controlled by users via browser windows.
+Botfather features an embedded Chromium-based web browser that can be automated. Starting with Botfather version 6, multiple browsers can be automated simultaneously. Browsers run "headless" in the background by default. However, they can be inspected and controlled by users via browser windows.
 
-Botfather browsers can be used to automate many things such as loading websites, executing Javascript, sending click, scroll and keyboard events. Furthermore, browsers can take screenshots which then can be saved our analyzed using the [Vision API](/docs/apiref/vision-api/).
+Botfather browsers can be used to automate many things such as loading websites, executing JavaScript, and sending click, scroll, and keyboard events. Furthermore, browsers can take screenshots, which can then be saved or analyzed using the [Vision API](/docs/apiref/vision-api/).
 
 ## Table of contents
 
@@ -65,7 +65,7 @@ browser.resize(new_size);
 
 ## Query basic browser information
 
-The `.getRect()` method return a [Rect](/docs/apiref/rect/) object, the `.getSize()` method a [Size](/docs/apiref/size/) object and the `.getUrl()` method a [Url](/docs/apiref/url/) object.
+The `.getRect()` method returns a [Rect](/docs/apiref/rect/) object, the `.getSize()` method a [Size](/docs/apiref/size/) object, and the `.getUrl()` method a [Url](/docs/apiref/url/) object.
 
 ```javascript
 if (browser.isLoading()) {
@@ -76,13 +76,13 @@ var rect = browser.getRect();
 var size = browser.getSize();
 var url = browser.getUrl();
 
-// A browsers Rect is usefull to get it's center Point
+// A browser's Rect is useful to get its center Point
 var center = rect.getCenter();
 ```
 
 ## Take screenshots of websites
 
-The `.takeScreenshot()` method returns an [Image](/docs/apiref/image/) object which can be saved or used with the [Vision API](/docs/apiref/vision-api/).
+The `.takeScreenshot()` method returns an [Image](/docs/apiref/image/) object, which can be saved or used with the [Vision API](/docs/apiref/vision-api/).
 
 ```javascript
 var image = browser.takeScreenshot();
@@ -107,7 +107,7 @@ browser.rightClick(a_point);
 
 ## Hold and release the mouse
 
-Holding a releasing is usefull for controlling games or performing a drag an drop.
+Holding and releasing is useful for controlling games or performing a drag and drop.
 
 ```javascript
 var a_point = new Point(100, 100);
@@ -128,7 +128,7 @@ browser.releaseRight(a_point);
 var location = new Point(200, 200);
 var pixels_horizontally = 0;
 var pixels_vertically = 50;
-browser.scrollWHeel(location, pixels_horizontally, pixels_vertically);
+browser.scrollWheel(location, pixels_horizontally, pixels_vertically);
 ```
 
 ## Press keyboard keys and enter text
@@ -138,14 +138,14 @@ var browser = new Browser("Test Browser", new Size(1400, 700));
 browser.loadUrl("https://keyboardtester.co/keyboard-tester.html");
 
 browser.holdKey("Ctrl");
-browser.enterText("Holding Ctrl has no effect here but it works!");
+browser.enterText("Holding Ctrl has no effect here, but it works!");
 browser.releaseKey("Ctrl");
 browser.pressKey("!");
 ```
 
-Pressing modifier keys to enter special characters such as "!" or "@" is not required. Instead write `browser.pressKey("!");` or `browser.pressKey("@");`. The botfather browser will try its best to enter the character specified. Still you might want to press certain modifier keys if you're e.g. testing a browser game. The same goes for other special keys.
+Pressing modifier keys to enter special characters such as "!" or "@" is not required. Instead, write `browser.pressKey("!");` or `browser.pressKey("@");`. The Botfather browser will try its best to enter the character specified. Still, you might want to press certain modifier keys if you're, e.g., testing a browser game. The same goes for other special keys.
 
-### Supported modifier keys and special keys:
+### Supported modifier keys and special keys
 
 - "Ctrl"
 - "Alt"
@@ -161,18 +161,18 @@ Pressing modifier keys to enter special characters such as "!" or "@" is not req
 - "Backspace"
 - "Delete"
 
-## Execute Javascript
+## Execute JavaScript
 
-Executes javascript_code in the browsers Javascript engine. This can be used to fill out login forms an sumit them. This method does not return anything.
+Executes `javascript_code` in the browser's JavaScript engine. This can be used to fill out login forms and submit them. This method does not return anything.
 
 ```javascript
-var code = "document.body.style.background = red;";
+var code = "document.body.style.background = 'red';";
 browser.executeJavascript(code);
 ```
 
-## Evaluate Javascript (experimental)
+## Evaluate JavaScript (experimental)
 
-Scripts can now evalute arbitrary Javascript code in a Browser an use the returned value.
+Scripts can now evaluate arbitrary JavaScript code in a browser and use the returned value.
 
 ```javascript
 var browser = new Browser("A Test Browser");
@@ -196,7 +196,7 @@ var location = browser.evaluateJavascript("document.location;");
 Helper.log(location.href);
 ```
 
-The Javascript is evaluated in the browsers `webhelper` process. In case something goes wrong the `.evaluateJavascript` method has an optional `timeout_in_ms` parameter. Its default value is `10000` milliseconds.
+The JavaScript is evaluated in the browser's `webhelper` process. In case something goes wrong, the `.evaluateJavascript` method has an optional `timeout_in_ms` parameter. Its default value is `10000` milliseconds.
 
 ```javascript
 var browser = new Browser("Timeout Test");
@@ -209,11 +209,11 @@ try {
 }
 ```
 
-**Beware**: This is an experimental feature. At the point of writing evaluating `document;` still crashes a browsers `webhelper` process.
+**Beware**: This is an experimental feature. At the time of writing, evaluating `document;` still crashes a browser's `webhelper` process.
 
 ## Manipulate or block responses
 
-Most of the browsers resource modification methods take regular expressions as arguments.
+Most of the browser's resource modification methods take regular expressions as arguments.
 
 ```javascript
 // Prevent a resource from loading
@@ -231,7 +231,7 @@ browser.unmodifyResources();
 
 ## Setting a custom user agent
 
-Setting a custom user agent is useful for testing websites or webapps which expect a specific user agent.
+Setting a custom user agent is useful for testing websites or web apps that expect a specific user agent.
 
 ```javascript
 var browser = new Browser("Test");
@@ -245,7 +245,7 @@ browser.setUserAgent(
 browser.loadUrl("https://www.whatismybrowser.com/detect/what-is-my-user-agent");
 ```
 
-One may change the user agent as many times as they wish. The user agent can also be resetted to Botfathers default. Botfathers default user agent is based on the its inbuilt Chromium browser.
+One may change the user agent as many times as they wish. The user agent can also be reset to Botfather's default. Botfather's default user agent is based on its built-in Chromium browser.
 
 ```javascript
 // Reset to the default user agent

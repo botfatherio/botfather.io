@@ -2,13 +2,13 @@
 title: Size Type
 ---
 
-Botfather has an inbuild `Size` type which can be used to represent sizes of anything two-dimensional. Furthermore some botfather Api methods require you to pass `Size` object parameters to their methods.
+Botfather has a built-in `Size` type, which can be used to represent the sizes of anything two-dimensional. Furthermore, some Botfather API methods require you to pass `Size` objects as parameters.
 
 ## Table of contents
 
-## Size type instanciation
+## Size type instantiation
 
-Size objects can be created providing either their _width_ and _height_ or _nothing_, which results in an _empty_ `Size` object.
+Size objects can be created by providing either their _width_ and _height_ or _nothing_, which results in an _empty_ `Size` object.
 
 - `var empty_size = new Size();`
 - `var size = new Size(1920, 1080);`
@@ -17,31 +17,33 @@ Size objects can be created providing either their _width_ and _height_ or _noth
 
 ### `Size.getWidth();`
 
-Returns the sizes width.
+Returns the size's width.
 
-### `Size.setWidth(int width);`
+### `Size.setWidth(width);`
 
-- `width` (number): The sizes new with.
+- `width` (number): The size's new width.
 
-Sets the sizes width to `width`.
+Sets the size's width to `width`.
 
 ### `Size.getHeight();`
 
-Returns the sizes height.
+Returns the size's height.
 
-### `Size.setHeight(int height);`
+### `Size.setHeight(height);`
 
-Sets the sizes height to `height`.
+- `height` (number): The size's new height.
+
+Sets the size's height to `height`.
 
 ### `Size.sizeAdded(other_size);`
 
-- `other_size` ([Size](/docs/apiref/size/)): The other size to be added
+- `other_size` ([Size](/docs/apiref/size/)): The other size to be added.
 
 Returns the sum of this size and other_size; each component is added separately.
 
 ### `Size.sizeSubtracted(other_size);`
 
-- `other_size` ([Size](/docs/apiref/size/)): The other size to be substracted
+- `other_size` ([Size](/docs/apiref/size/)): The other size to be subtracted.
 
 Returns other_size subtracted from this size; each component is subtracted separately.
 
@@ -51,7 +53,7 @@ Returns other_size subtracted from this size; each component is subtracted separ
 
 Returns a size holding the minimum width and height of this size and the given `other_size`.
 
-### `Size.expandedTo(const QSize &other_size);`
+### `Size.expandedTo(other_size);`
 
 - `other_size` ([Size](#)): Another size.
 
@@ -59,11 +61,11 @@ Returns a size holding the maximum width and height of this size and the given `
 
 ### `Size.isEmpty();`
 
-Returns true if either of the sizes width and height is less than or equal to 0; otherwise returns false.
+Returns true if either the size's width or height is less than or equal to 0; otherwise returns false.
 
 ### `Size.transpose();`
 
-Swaps the sizes width and height values.
+Swaps the size's width and height values.
 
 ### `Size.transposed();`
 

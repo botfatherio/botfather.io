@@ -2,31 +2,31 @@
 title: Desktop API
 ---
 
-Botfather's Desktop API can be used for Windows and Linux desktop automation. The API provides methods to take screenshots and send fake keyboard and mouse input events. On Linux Botfather registers a fake hardware device to send input events, which can't be ignored by programs such as games. The Desktop API, like any other Botfather API, is crossplatform. That means you can use the same code to automate both Windows and Linux desktops.
+Botfather's Desktop API can be used for Windows and Linux desktop automation. The API provides methods to take screenshots and send fake keyboard and mouse input events. On Linux, Botfather registers a fake hardware device to send input events, which can't be ignored by programs such as games. The Desktop API, like any other Botfather API, is cross-platform. That means you can use the same code to automate both Windows and Linux desktops.
 
 ## Table of contents
 
 ## Taking screenshots
 
-One can take screenshots of your desktop and save them to a file or analyze them.
+You can take screenshots of your desktop and save them to a file or analyze them.
 
-A screenshot is an [Image](/docs/apiref/image/) object which can be analyzed using the [Vision API](/docs/apiref/vision-api/). For example, one could find elements (such as icons) on the screenshot and then use the found position to click there.
+A screenshot is an [Image](/docs/apiref/image/) object, which can be analyzed using the [Vision API](/docs/apiref/vision-api/). For example, one could find elements (such as icons) in the screenshot and then use the found position to click there.
 
 ```javascript
 var screenshot = Desktop.takeScreenshot();
 
-// Now the screenshot can be saved or analyzed. eg:
+// Now the screenshot can be saved or analyzed, e.g.:
 
 screenshot.save("screenshot1.png");
 ```
 
 ## Getting the screen size
 
-When writting bots which shall work on multiple screen sizes, its useful to query the current screen size.
+When writing bots that shall work on multiple screen sizes, it's useful to query the current screen size.
 
 Botfather provides two methods to do so. One returns the screen size as a [Size](/docs/apiref/size/) object, the other one as a [Rect](/docs/apiref/rect/) object.
 
-The later one is useful if you want to get the center [Point](/docs/apiref/point/) of the screen.
+The latter is useful if you want to get the center [Point](/docs/apiref/point/) of the screen.
 
 ```javascript
 var screenSize = Desktop.getSize();
@@ -38,17 +38,17 @@ var centerPoint = screenRect.getCenter();
 
 ## Using the mouse
 
-Botfather provides methods which allow you to `press` (click), `hold` and `release` mouse buttons. The button can be specified. The default mouse button is "left".
+Botfather provides methods that allow you to `press` (click), `hold`, and `release` mouse buttons. The button can be specified. The default mouse button is "left".
 
 ### Moving the mouse
 
 The mouse can be moved to any position on the screen.
 
-"Warping" is actualy the more fitting term, as the mouse does not touch the pixels between its old and its new position. If you need to touch every pixel, you may write your own function for it, utalizing the `Desktop.warpCursor` method.
+"Warping" is actually the more fitting term, as the mouse does not touch the pixels between its old and its new position. If you need to touch every pixel, you may write your own function for it, utilizing the `Desktop.warpCursor` method.
 
 ```javascript
-// Warp the mourse cursor to the top left corner of your screen
-Desktop.warpCursor(new Point(0, 0);
+// Warp the mouse cursor to the top left corner of your screen
+Desktop.warpCursor(new Point(0, 0));
 ```
 
 ### Getting the mouse position
@@ -77,9 +77,9 @@ Desktop.holdMouse(position, "left");
 Desktop.releaseMouse(position, "left");
 ```
 
-### Hold, Press, Release the mouse button
+### Hold, press, and release the mouse button
 
-The `Desktop.pressMouse` method is for clicks. Internally its just the combination of `Desktop.holdMouse` and `Desktop.releaseMouse`.
+The `Desktop.pressMouse` method is for clicks. Internally, it's just the combination of `Desktop.holdMouse` and `Desktop.releaseMouse`.
 
 ```javascript
 var position = new Point(150, 150);
@@ -102,9 +102,9 @@ Desktop.releaseMouse(position, "right");
 Desktop.pressMouse(position, "right");
 ```
 
-### Drag and Drop
+### Drag and drop
 
-Drag and drop has many different implementations in operating systems and even individual programs. Thats the reason we haven't provided a method for it.
+Drag and drop has many different implementations in operating systems and even individual programs. That's the reason we haven't provided a method for it.
 
 However, you can build your own drag and drop method. The following primitive code can be used as a blueprint:
 
@@ -127,15 +127,15 @@ dragAndDrop(new Point(60, 60), new Point(400, 60));
 
 ### Mouse scrolling
 
-The `Desktop.scroll` method can be used to scroll the mouse wheel on the current mouse position. Note that mouse wheel scrolling is a relative movement. The distance is specified in a ralative unit which depends on the platform (Windows, Linux) and the programm receiving the scroll event.
+The `Desktop.scroll` method can be used to scroll the mouse wheel at the current mouse position. Note that mouse wheel scrolling is a relative movement. The distance is specified in a relative unit, which depends on the platform (Windows, Linux) and the program receiving the scroll event.
 
-The `Desktop.scroll` methods first parameter is the amount of `units` to scroll.
+The `Desktop.scroll` method's first parameter is the amount of `units` to scroll.
 
 ```javascript
 Desktop.scroll(300);
 ```
 
-The methods second parameter can be used to enable horizontal movement. The second parameter defaults to `false` (vertical movement).
+The method's second parameter can be used to enable horizontal movement. The second parameter defaults to `false` (vertical movement).
 
 ```javascript
 var horizontal = false;
@@ -145,7 +145,7 @@ Desktop.scroll(300, horizontal);
 
 ### Legacy mouse input
 
-Before version `6.7.0` mouse input could only be done using the methods below. These still work(!) but we encourage you to use the methods show above.
+Before version `6.7.0`, mouse input could only be done using the methods below. These still work(!), but we encourage you to use the methods shown above.
 
 ```javascript
 var position = new Point(50, 50);
@@ -163,7 +163,7 @@ Desktop.pressMouse(position, "right");
 
 ## Keyboard input
 
-Similar to how the mouse may be controlled, keys can be pressed, hold and released. The key to press/hold/release must be specified.
+Similar to how the mouse may be controlled, keys can be pressed, held, and released. The key to press/hold/release must be specified.
 
 A list of supported key codes can be found below the examples.
 
@@ -233,7 +233,7 @@ These are all keycodes currently supported by Botfather's Desktop API:
 - "y"
 - "z"
 
-#### F Keys
+#### F keys
 
 - "f1"
 - "f2"
@@ -260,7 +260,7 @@ These are all keycodes currently supported by Botfather's Desktop API:
 - "f23"
 - "f24"
 
-#### Arrow Keys
+#### Arrow keys
 
 - "left"
 - "right"

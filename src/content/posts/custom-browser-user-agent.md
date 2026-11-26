@@ -6,4 +6,4 @@ lead: Due to popular request, the Botfather browsers can now have custom user ag
 
 ## Use case
 
-Certain websites behaviour is based on the User Agent string the browser provides. Being able to alter the user agent string allows simulating different browsers. This is useful for testing websites or webapps which expect a custom user agent string.
+Certain websites' behavior is based on the user agent string the browser provides. Being able to alter the user agent string allows simulating different browsers. This is useful for testing websites or web apps that expect a custom user agent string.

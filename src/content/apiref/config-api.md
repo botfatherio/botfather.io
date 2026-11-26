@@ -108,7 +108,7 @@ An object with a single `groups` array. Each group is an object with:
 - `name` (string): The title of the group's box in the `Config` tab.
 - `options` (array): The config options shown in this group.
 
-Groups only organise how options are shown. You can have as many groups as you like. The `Config` tab shows a scrollbar when it needs more space. Empty groups are not shown.
+Groups only organize how options are shown. You can have as many groups as you like. The `Config` tab shows a scrollbar when it needs more space. Empty groups are not shown.
 
 The `Config` tab is disabled unless there is at least one option with an `id`.
 
@@ -136,7 +136,7 @@ Shown as a spinbox for whole numbers. The value is a number.
 - `min` (number): Optional. The smallest value allowed.
 - `max` (number): Optional. The largest value allowed.
 
-`min` and `max` only work if both are set. Without them the spinbox only allows values from 0 to 99.
+`min` and `max` only work if both are set. Without them, the spinbox only allows values from 0 to 99.
 
 ### `number`
 
@@ -145,7 +145,7 @@ Shown as a spinbox for decimal numbers. The value is a number.
 - `min` (number): Optional. The smallest value allowed.
 - `max` (number): Optional. The largest value allowed.
 
-`min` and `max` only work if both are set, and they are rounded to whole numbers. Without them the spinbox only allows values from 0 to 99.99.
+`min` and `max` only work if both are set, and they are rounded to whole numbers. Without them, the spinbox only allows values from 0 to 99.99.
 
 ### `string`
 
@@ -161,7 +161,7 @@ Shown as a dropdown menu. The value is the string of the choice the user selecte
 
 - `choices` (object): Maps the text shown in the dropdown to the value returned by `Config.getValue`. Both must be strings.
 
-The choices are listed in alphabetical order of their text. Set `default` to one of the choice values. Otherwise no choice is selected until the user picks one.
+The choices are listed in alphabetical order of their text. Set `default` to one of the choice values. Otherwise, no choice is selected until the user picks one.
 
 ```json
 {

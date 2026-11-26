@@ -2,15 +2,15 @@
 title: BlobTpl Type
 ---
 
-The BlobTpl is used to describe the shape and size of blobs. Such blobs can then be found on screenshots using the [Vision API](/docs/apiref/vision-api/)s `.findBlobs` method.
+The BlobTpl is used to describe the shape and size of blobs. Such blobs can then be found on screenshots using the [Vision API](/docs/apiref/vision-api/)'s `.findBlobs` method.
 
-If you want to look for blobs of a certain color, isolate that color on your [Image](/docs/apiref/image/) in beforehand. To do you used the [Image](/docs/apiref/image/) types `.isolateColorRange` method. After doing so only blobs of the desired color are left.
+If you want to look for blobs of a certain color, isolate that color in your [Image](/docs/apiref/image/) beforehand. To do so, use the [Image](/docs/apiref/image/) type's `.isolateColorRange` method. After doing so, only blobs of the desired color are left.
 
 ## Table of Contents
 
 ## Creating a BlobTpl
 
-The BlobTpls constructor takes up to 11 numeric arguments in the following order. Grouped arguments must both be provided at the same time.
+The BlobTpl's constructor takes up to 11 numeric arguments in the following order. Grouped arguments must be provided at the same time.
 
 <table class="table">
 	<tr>
@@ -59,4 +59,4 @@ The BlobTpls constructor takes up to 11 numeric arguments in the following order
 
 ## BlobTpl methods
 
-_TODO_ ...there are getters and setter for all parameters mentioned in the _Creating a BlobTpl_ section.
+_TODO_ ...there are getters and setters for all parameters mentioned in the _Creating a BlobTpl_ section.
