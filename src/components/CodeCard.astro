@@ -17,7 +17,7 @@ const { filename, code } = Astro.props;
     <Code
       code={code}
       lang="js"
-      theme="github-light"
+      themes={{ light: "github-light", dark: "github-dark" }}
       class="mb-0 p-2"
       tabindex={undefined}
     />

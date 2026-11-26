@@ -42,6 +42,10 @@ $link-color: $botfather_blue;
 $body-color: $botfather_grey-dark;
 $border-color: $botfather_grey-lighter;
 $component-active-bg: $link-color;
+$link-color-dark: tint-color($botfather_blue, 40%);
+
+// No theme toggle: always follow the system preference via prefers-color-scheme.
+$color-mode-type: media-query;
 
 $font-family-sans-serif:
   BlinkMacSystemFont,
@@ -115,8 +119,16 @@ $accordion-button-active-bg: var(--#{$prefix}accordion-bg);
   @include button-outline-variant($botfather_cyan, $botfather_white);
 }
 
+@include color-mode(dark) {
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+  }
+}
+
 .markdown .astro-code {
-  @extend .bg-light;
+  background-color: var(--#{$prefix}tertiary-bg) !important;
   @extend .border;
   @extend .rounded;
   @extend .p-3;

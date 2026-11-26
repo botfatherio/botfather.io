@@ -9,7 +9,10 @@ export default defineConfig({
   compressHTML: true,
   markdown: {
     shikiConfig: {
-      theme: "github-light",
+      themes: {
+        light: "github-light",
+        dark: "github-dark",
+      },
     },
   },
   integrations: [
