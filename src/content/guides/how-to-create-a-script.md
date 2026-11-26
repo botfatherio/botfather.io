@@ -6,7 +6,7 @@ Scripts tell Botfather bots what to do, they contain the bots logic. Scripts are
 
 ## You need a code editor
 
-Actually any text editor can be used to create Botfather scripts. We recomment you to use a code editor with syntax highlighting such as [Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/), or [Sublime Text](https://www.sublimetext.com/). There are many more code editors, but we plan to release extensions for those three at some point in the future.
+Actually any text editor can be used to create Botfather scripts. We recomment you to use a code editor with syntax highlighting such as [Visual Studio Code](https://code.visualstudio.com/) or [Zed](https://zed.dev/). There are many more code editors, but we plan to release extensions for those two at some point in the future.
 
 ## The script file
 
