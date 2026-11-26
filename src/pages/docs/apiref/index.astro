@@ -1,8 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
-import Breadcrumb from "../../../components/Breadcrumb.astro";
-import BreadcrumbItem from "../../../components/BreadcrumbItem.astro";
+import Header from "../../../components/Header.astro";
 import DocsSection from "../../../components/DocsSection.astro";
 import DocsItem from "../../../components/DocsItem.astro";
 
@@ -10,17 +9,16 @@ const apiref = await getCollection("apiref");
 ---
 
 <Layout title="API Reference">
-  <Breadcrumb>
-    <BreadcrumbItem href="/docs/" label="Documentation" />
-    <BreadcrumbItem label="API Reference" />
-  </Breadcrumb>
+  <Header
+    title="API Reference"
+    description="Detailed descriptions of all available script APIs and types"
+  />
 
   <div class="container my-5">
-    <DocsSection level={1} href="/docs/apiref/" title="API Reference">
+    <DocsSection href="/docs/apiref/" title="API Reference">
       {
         apiref.map((reference) => (
           <DocsItem
-            level={2}
             href={`/docs/apiref/${reference.id}/`}
             title={reference.data.title}
           />

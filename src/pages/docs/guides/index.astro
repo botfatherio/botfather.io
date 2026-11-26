@@ -1,8 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
-import Breadcrumb from "../../../components/Breadcrumb.astro";
-import BreadcrumbItem from "../../../components/BreadcrumbItem.astro";
+import Header from "../../../components/Header.astro";
 import DocsSection from "../../../components/DocsSection.astro";
 import DocsItem from "../../../components/DocsItem.astro";
 
@@ -10,17 +9,16 @@ const guides = await getCollection("guides");
 ---
 
 <Layout title="Guides">
-  <Breadcrumb>
-    <BreadcrumbItem href="/docs/" label="Documentation" />
-    <BreadcrumbItem label="Guides" />
-  </Breadcrumb>
+  <Header
+    title="Guides"
+    description="Step-by-step tutorials to get you started on creating your own bots."
+  />
 
   <div class="container my-5">
-    <DocsSection level={1} href="/docs/guides/" title="Guides">
+    <DocsSection href="/docs/guides/" title="Guides">
       {
         guides.map((guide) => (
           <DocsItem
-            level={2}
             href={`/docs/guides/${guide.id}/`}
             title={guide.data.title}
           />
